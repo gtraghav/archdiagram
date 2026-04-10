@@ -4,7 +4,7 @@ A local Mac desktop app for creating cloud architecture diagrams — built with 
 
 ![ArchDiagram Screenshot](docs/screenshot.png)
 
-> **Video walkthrough:** [Watch on YouTube]([text](https://www.youtube.com/watch?v=vqcrmIR0P8Y))
+**Video walkthrough:** [Watch on YouTube]([text](https://www.youtube.com/watch?v=vqcrmIR0P8Y))
 
 ---
 
