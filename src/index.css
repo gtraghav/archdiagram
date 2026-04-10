@@ -1,0 +1,86 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  color: #1e293b;
+  background: #f8fafc;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Export mode: hide UI chrome so only the canvas is captured */
+body.export-mode .toolbar,
+body.export-mode .icon-library,
+body.export-mode .properties-panel {
+  display: none !important;
+}
+
+body.export-mode .canvas-container {
+  width: 100vw !important;
+}
+
+/* React Flow custom styles */
+.react-flow__node {
+  border-radius: 4px;
+}
+
+/* Connection handles — hidden by default, shown on node hover */
+.icon-handle {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  background: #3b82f6 !important;
+  border: 2px solid white !important;
+  box-shadow: 0 0 0 1px #3b82f6 !important;
+  opacity: 0;
+  transition: opacity 0.15s;
+  /* Offset paired handles so they don't overlap */
+}
+
+.react-flow__node:hover .icon-handle {
+  opacity: 1;
+}
+
+/* Keep handles visible while actively connecting */
+.react-flow__handle.connecting {
+  opacity: 1 !important;
+}
+
+/* Active connection line */
+.react-flow__connection-path {
+  stroke: #3b82f6;
+  stroke-width: 2;
+  stroke-dasharray: 5 3;
+}
+
+/* Highlight valid target handle during connection */
+.react-flow__handle.valid {
+  background: #22c55e !important;
+  opacity: 1 !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

@@ -1,0 +1,148 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 0 12px;
+  /* Space for macOS traffic lights when using hiddenInset title bar */
+  padding-left: 80px;
+  -webkit-app-region: drag;
+  flex-shrink: 0;
+}
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  -webkit-app-region: no-drag;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.title {
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.separator {
+  width: 1px;
+  height: 20px;
+  background: #e2e8f0;
+  margin: 0 4px;
+}
+
+.toolBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  color: #475569;
+  transition: background 0.1s, border-color 0.1s;
+  -webkit-app-region: no-drag;
+}
+
+.toolBtn:hover {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+.toolBtn.active {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1d4ed8;
+}
+
+.toolIcon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.toolLabel {
+  font-size: 12px;
+}
+
+.sidebarToggle {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #64748b;
+  -webkit-app-region: no-drag;
+  transition: background 0.1s;
+}
+
+.sidebarToggle:hover {
+  background: #f1f5f9;
+}
+
+.shapeDropdownWrap {
+  position: relative;
+  -webkit-app-region: no-drag;
+}
+
+.dropArrow {
+  font-size: 9px;
+  margin-left: 2px;
+  opacity: 0.6;
+}
+
+.shapeMenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  padding: 4px;
+  z-index: 1000;
+  min-width: 160px;
+}
+
+.shapeMenuItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #374151;
+  text-align: left;
+  transition: background 0.1s;
+}
+
+.shapeMenuItem:hover {
+  background: #f1f5f9;
+}
+
+.shapeMenuItemActive {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.shapeMenuIcon {
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}

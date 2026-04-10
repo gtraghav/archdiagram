@@ -1,0 +1,49 @@
+{
+  "provider": "azure",
+  "version": "1.0",
+  "categories": [
+    {
+      "name": "Compute",
+      "icons": [
+        { "id": "azure-compute-virtual-machines", "name": "Virtual Machines", "provider": "azure", "category": "Compute", "tags": ["vm", "iaas", "server", "compute"], "svgPath": "compute/virtual-machines.svg" },
+        { "id": "azure-compute-app-service", "name": "App Service", "provider": "azure", "category": "Compute", "tags": ["web", "app", "paas", "webapp"], "svgPath": "compute/app-service.svg" },
+        { "id": "azure-compute-kubernetes-service", "name": "Kubernetes Service", "provider": "azure", "category": "Compute", "tags": ["aks", "kubernetes", "container", "k8s"], "svgPath": "compute/kubernetes-service.svg" },
+        { "id": "azure-compute-functions", "name": "Azure Functions", "provider": "azure", "category": "Compute", "tags": ["serverless", "lambda", "function", "faas"], "svgPath": "compute/functions.svg" }
+      ]
+    },
+    {
+      "name": "Networking",
+      "icons": [
+        { "id": "azure-networking-virtual-network", "name": "Virtual Network", "provider": "azure", "category": "Networking", "tags": ["vnet", "network", "vpc", "subnet"], "svgPath": "networking/virtual-network.svg" },
+        { "id": "azure-networking-load-balancer", "name": "Load Balancer", "provider": "azure", "category": "Networking", "tags": ["lb", "load", "balance", "traffic"], "svgPath": "networking/load-balancer.svg" },
+        { "id": "azure-networking-api-management", "name": "API Management", "provider": "azure", "category": "Networking", "tags": ["api", "gateway", "apim", "rest"], "svgPath": "networking/api-management.svg" }
+      ]
+    },
+    {
+      "name": "Storage",
+      "icons": [
+        { "id": "azure-storage-storage-accounts", "name": "Storage Accounts", "provider": "azure", "category": "Storage", "tags": ["storage", "blob", "file", "table", "queue"], "svgPath": "storage/storage-accounts.svg" },
+        { "id": "azure-storage-blob-storage", "name": "Blob Storage", "provider": "azure", "category": "Storage", "tags": ["blob", "object", "storage", "file"], "svgPath": "storage/blob-storage.svg" }
+      ]
+    },
+    {
+      "name": "Databases",
+      "icons": [
+        { "id": "azure-databases-sql-database", "name": "SQL Database", "provider": "azure", "category": "Databases", "tags": ["sql", "database", "relational", "rdbms"], "svgPath": "databases/sql-database.svg" },
+        { "id": "azure-databases-cosmos-db", "name": "Cosmos DB", "provider": "azure", "category": "Databases", "tags": ["cosmos", "nosql", "document", "global", "distributed"], "svgPath": "databases/cosmos-db.svg" }
+      ]
+    },
+    {
+      "name": "Security",
+      "icons": [
+        { "id": "azure-security-key-vault", "name": "Key Vault", "provider": "azure", "category": "Security", "tags": ["key", "vault", "secret", "certificate", "security"], "svgPath": "security/key-vault.svg" }
+      ]
+    },
+    {
+      "name": "AI + Machine Learning",
+      "icons": [
+        { "id": "azure-ai-cognitive-services", "name": "Cognitive Services", "provider": "azure", "category": "AI + Machine Learning", "tags": ["ai", "ml", "cognitive", "vision", "speech", "nlp"], "svgPath": "ai/cognitive-services.svg" }
+      ]
+    }
+  ]
+}

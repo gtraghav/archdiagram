@@ -1,0 +1,49 @@
+{
+  "provider": "aws",
+  "version": "1.0",
+  "categories": [
+    {
+      "name": "Compute",
+      "icons": [
+        { "id": "aws-compute-ec2", "name": "EC2", "provider": "aws", "category": "Compute", "tags": ["ec2", "server", "instance", "iaas", "virtual machine"], "svgPath": "compute/ec2.svg" },
+        { "id": "aws-compute-lambda", "name": "Lambda", "provider": "aws", "category": "Compute", "tags": ["lambda", "serverless", "function", "faas"], "svgPath": "compute/lambda.svg" },
+        { "id": "aws-compute-eks", "name": "EKS", "provider": "aws", "category": "Compute", "tags": ["eks", "kubernetes", "container", "k8s"], "svgPath": "compute/eks.svg" },
+        { "id": "aws-compute-ecs", "name": "ECS", "provider": "aws", "category": "Compute", "tags": ["ecs", "container", "docker", "task"], "svgPath": "compute/ecs.svg" }
+      ]
+    },
+    {
+      "name": "Networking",
+      "icons": [
+        { "id": "aws-networking-vpc", "name": "VPC", "provider": "aws", "category": "Networking", "tags": ["vpc", "network", "virtual private cloud", "subnet"], "svgPath": "networking/vpc.svg" },
+        { "id": "aws-networking-api-gateway", "name": "API Gateway", "provider": "aws", "category": "Networking", "tags": ["api", "gateway", "rest", "http"], "svgPath": "networking/api-gateway.svg" },
+        { "id": "aws-networking-elb", "name": "Elastic Load Balancing", "provider": "aws", "category": "Networking", "tags": ["elb", "alb", "load balancer", "traffic"], "svgPath": "networking/elb.svg" }
+      ]
+    },
+    {
+      "name": "Storage",
+      "icons": [
+        { "id": "aws-storage-s3", "name": "S3", "provider": "aws", "category": "Storage", "tags": ["s3", "object", "storage", "bucket", "blob"], "svgPath": "storage/s3.svg" },
+        { "id": "aws-storage-ebs", "name": "EBS", "provider": "aws", "category": "Storage", "tags": ["ebs", "block", "volume", "disk", "storage"], "svgPath": "storage/ebs.svg" }
+      ]
+    },
+    {
+      "name": "Databases",
+      "icons": [
+        { "id": "aws-databases-rds", "name": "RDS", "provider": "aws", "category": "Databases", "tags": ["rds", "sql", "relational", "database", "mysql", "postgres"], "svgPath": "databases/rds.svg" },
+        { "id": "aws-databases-dynamodb", "name": "DynamoDB", "provider": "aws", "category": "Databases", "tags": ["dynamodb", "nosql", "document", "key-value", "database"], "svgPath": "databases/dynamodb.svg" }
+      ]
+    },
+    {
+      "name": "Security",
+      "icons": [
+        { "id": "aws-security-iam", "name": "IAM", "provider": "aws", "category": "Security", "tags": ["iam", "identity", "access", "policy", "role", "security"], "svgPath": "security/iam.svg" }
+      ]
+    },
+    {
+      "name": "AI + Machine Learning",
+      "icons": [
+        { "id": "aws-ai-bedrock", "name": "Bedrock", "provider": "aws", "category": "AI + Machine Learning", "tags": ["bedrock", "ai", "llm", "generative", "ml", "foundation model"], "svgPath": "ai/bedrock.svg" }
+      ]
+    }
+  ]
+}
