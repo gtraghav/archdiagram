@@ -1,0 +1,210 @@
+{
+  "provider": "azure",
+  "version": "1.0",
+  "categories": [
+    {
+      "name": "Compute",
+      "icons": [
+        {
+          "id": "azure-compute-virtual-machines",
+          "name": "Virtual Machines",
+          "provider": "azure",
+          "category": "Compute",
+          "tags": [
+            "vm",
+            "iaas",
+            "server",
+            "compute"
+          ],
+          "svgPath": "compute/10021-icon-service-Virtual-Machine.svg"
+        },
+        {
+          "id": "azure-compute-app-service",
+          "name": "App Service",
+          "provider": "azure",
+          "category": "Compute",
+          "tags": [
+            "web",
+            "app",
+            "paas",
+            "webapp"
+          ],
+          "svgPath": "app services/10035-icon-service-App-Services.svg"
+        },
+        {
+          "id": "azure-compute-kubernetes-service",
+          "name": "Kubernetes Service",
+          "provider": "azure",
+          "category": "Compute",
+          "tags": [
+            "aks",
+            "kubernetes",
+            "container",
+            "k8s"
+          ],
+          "svgPath": "compute/10023-icon-service-Kubernetes-Services.svg"
+        },
+        {
+          "id": "azure-compute-functions",
+          "name": "Azure Functions",
+          "provider": "azure",
+          "category": "Compute",
+          "tags": [
+            "serverless",
+            "lambda",
+            "function",
+            "faas"
+          ],
+          "svgPath": "compute/10029-icon-service-Function-Apps.svg"
+        }
+      ]
+    },
+    {
+      "name": "Networking",
+      "icons": [
+        {
+          "id": "azure-networking-virtual-network",
+          "name": "Virtual Network",
+          "provider": "azure",
+          "category": "Networking",
+          "tags": [
+            "vnet",
+            "network",
+            "vpc",
+            "subnet"
+          ],
+          "svgPath": "networking/10061-icon-service-Virtual-Networks.svg"
+        },
+        {
+          "id": "azure-networking-load-balancer",
+          "name": "Load Balancer",
+          "provider": "azure",
+          "category": "Networking",
+          "tags": [
+            "lb",
+            "load",
+            "balance",
+            "traffic"
+          ],
+          "svgPath": "networking/10062-icon-service-Load-Balancers.svg"
+        },
+        {
+          "id": "azure-networking-api-management",
+          "name": "API Management",
+          "provider": "azure",
+          "category": "Networking",
+          "tags": [
+            "api",
+            "gateway",
+            "apim",
+            "rest"
+          ],
+          "svgPath": "integration/10042-icon-service-API-Management-Services.svg"
+        }
+      ]
+    },
+    {
+      "name": "Storage",
+      "icons": [
+        {
+          "id": "azure-storage-storage-accounts",
+          "name": "Storage Accounts",
+          "provider": "azure",
+          "category": "Storage",
+          "tags": [
+            "storage",
+            "blob",
+            "file",
+            "table",
+            "queue"
+          ],
+          "svgPath": "storage/10086-icon-service-Storage-Accounts.svg"
+        },
+        {
+          "id": "azure-storage-blob-storage",
+          "name": "Blob Storage",
+          "provider": "azure",
+          "category": "Storage",
+          "tags": [
+            "blob",
+            "object",
+            "storage",
+            "file"
+          ],
+          "svgPath": "general/10780-icon-service-Blob-Block.svg"
+        }
+      ]
+    },
+    {
+      "name": "Databases",
+      "icons": [
+        {
+          "id": "azure-databases-sql-database",
+          "name": "SQL Database",
+          "provider": "azure",
+          "category": "Databases",
+          "tags": [
+            "sql",
+            "database",
+            "relational",
+            "rdbms"
+          ],
+          "svgPath": "databases/10130-icon-service-SQL-Database.svg"
+        },
+        {
+          "id": "azure-databases-cosmos-db",
+          "name": "Cosmos DB",
+          "provider": "azure",
+          "category": "Databases",
+          "tags": [
+            "cosmos",
+            "nosql",
+            "document",
+            "global",
+            "distributed"
+          ],
+          "svgPath": "databases/10121-icon-service-Azure-Cosmos-DB.svg"
+        }
+      ]
+    },
+    {
+      "name": "Security",
+      "icons": [
+        {
+          "id": "azure-security-key-vault",
+          "name": "Key Vault",
+          "provider": "azure",
+          "category": "Security",
+          "tags": [
+            "key",
+            "vault",
+            "secret",
+            "certificate",
+            "security"
+          ],
+          "svgPath": "security/10245-icon-service-Key-Vaults.svg"
+        }
+      ]
+    },
+    {
+      "name": "AI + Machine Learning",
+      "icons": [
+        {
+          "id": "azure-ai-cognitive-services",
+          "name": "Cognitive Services",
+          "provider": "azure",
+          "category": "AI + Machine Learning",
+          "tags": [
+            "ai",
+            "ml",
+            "cognitive",
+            "vision",
+            "speech",
+            "nlp"
+          ],
+          "svgPath": "ai + machine learning/10162-icon-service-Cognitive-Services.svg"
+        }
+      ]
+    }
+  ]
+}

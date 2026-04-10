@@ -66,9 +66,9 @@ export default function NodeProperties({ node }: Props) {
           <input
             className={styles.input}
             type="number"
-            min={6}
+            min={3}
             max={48}
-            value={d.fontSize ?? 10}
+            value={d.fontSize ?? 6}
             onChange={(e) => updateNodeData(node.id, { fontSize: Number(e.target.value) })}
           />
         </Field>

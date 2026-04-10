@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-  <rect width="60" height="60" rx="8" fill="#FF9900"/>
-  <rect x="10" y="12" width="40" height="28" rx="3" fill="none" stroke="white" stroke-width="2.5"/>
-  <rect x="16" y="18" width="28" height="16" rx="1.5" fill="white" opacity="0.3"/>
-  <line x1="30" y1="40" x2="30" y2="48" stroke="white" stroke-width="2.5"/>
-  <line x1="20" y1="48" x2="40" y2="48" stroke="white" stroke-width="2.5"/>
-  <text x="30" y="32" font-family="Arial" font-size="9" font-weight="bold" fill="white" text-anchor="middle">EC2</text>
-</svg>

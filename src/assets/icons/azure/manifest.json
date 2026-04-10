@@ -1,49 +1,5965 @@
 {
-  "provider": "azure",
-  "version": "1.0",
-  "categories": [
-    {
-      "name": "Compute",
-      "icons": [
-        { "id": "azure-compute-virtual-machines", "name": "Virtual Machines", "provider": "azure", "category": "Compute", "tags": ["vm", "iaas", "server", "compute"], "svgPath": "compute/virtual-machines.svg" },
-        { "id": "azure-compute-app-service", "name": "App Service", "provider": "azure", "category": "Compute", "tags": ["web", "app", "paas", "webapp"], "svgPath": "compute/app-service.svg" },
-        { "id": "azure-compute-kubernetes-service", "name": "Kubernetes Service", "provider": "azure", "category": "Compute", "tags": ["aks", "kubernetes", "container", "k8s"], "svgPath": "compute/kubernetes-service.svg" },
-        { "id": "azure-compute-functions", "name": "Azure Functions", "provider": "azure", "category": "Compute", "tags": ["serverless", "lambda", "function", "faas"], "svgPath": "compute/functions.svg" }
-      ]
-    },
-    {
-      "name": "Networking",
-      "icons": [
-        { "id": "azure-networking-virtual-network", "name": "Virtual Network", "provider": "azure", "category": "Networking", "tags": ["vnet", "network", "vpc", "subnet"], "svgPath": "networking/virtual-network.svg" },
-        { "id": "azure-networking-load-balancer", "name": "Load Balancer", "provider": "azure", "category": "Networking", "tags": ["lb", "load", "balance", "traffic"], "svgPath": "networking/load-balancer.svg" },
-        { "id": "azure-networking-api-management", "name": "API Management", "provider": "azure", "category": "Networking", "tags": ["api", "gateway", "apim", "rest"], "svgPath": "networking/api-management.svg" }
-      ]
-    },
-    {
-      "name": "Storage",
-      "icons": [
-        { "id": "azure-storage-storage-accounts", "name": "Storage Accounts", "provider": "azure", "category": "Storage", "tags": ["storage", "blob", "file", "table", "queue"], "svgPath": "storage/storage-accounts.svg" },
-        { "id": "azure-storage-blob-storage", "name": "Blob Storage", "provider": "azure", "category": "Storage", "tags": ["blob", "object", "storage", "file"], "svgPath": "storage/blob-storage.svg" }
-      ]
-    },
-    {
-      "name": "Databases",
-      "icons": [
-        { "id": "azure-databases-sql-database", "name": "SQL Database", "provider": "azure", "category": "Databases", "tags": ["sql", "database", "relational", "rdbms"], "svgPath": "databases/sql-database.svg" },
-        { "id": "azure-databases-cosmos-db", "name": "Cosmos DB", "provider": "azure", "category": "Databases", "tags": ["cosmos", "nosql", "document", "global", "distributed"], "svgPath": "databases/cosmos-db.svg" }
-      ]
-    },
-    {
-      "name": "Security",
-      "icons": [
-        { "id": "azure-security-key-vault", "name": "Key Vault", "provider": "azure", "category": "Security", "tags": ["key", "vault", "secret", "certificate", "security"], "svgPath": "security/key-vault.svg" }
-      ]
-    },
-    {
-      "name": "AI + Machine Learning",
-      "icons": [
-        { "id": "azure-ai-cognitive-services", "name": "Cognitive Services", "provider": "azure", "category": "AI + Machine Learning", "tags": ["ai", "ml", "cognitive", "vision", "speech", "nlp"], "svgPath": "ai/cognitive-services.svg" }
-      ]
-    }
-  ]
+	"provider": "azure",
+	"version": "1.0",
+	"categories": [
+		{
+			"name": "Compute",
+			"icons": [
+				{
+					"id": "azure-compute-virtual-machines",
+					"name": "Virtual Machines",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [
+						"vm",
+						"iaas",
+						"server",
+						"compute"
+					],
+					"svgPath": "compute/10021-icon-service-Virtual-Machine.svg"
+				},
+				{
+					"id": "azure-compute-app-service",
+					"name": "App Service",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [
+						"web",
+						"app",
+						"paas",
+						"webapp"
+					],
+					"svgPath": "app services/10035-icon-service-App-Services.svg"
+				},
+				{
+					"id": "azure-compute-kubernetes-service",
+					"name": "Kubernetes Service",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [
+						"aks",
+						"kubernetes",
+						"container",
+						"k8s"
+					],
+					"svgPath": "compute/10023-icon-service-Kubernetes-Services.svg"
+				},
+				{
+					"id": "azure-compute-functions",
+					"name": "Azure Functions",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [
+						"serverless",
+						"lambda",
+						"function",
+						"faas"
+					],
+					"svgPath": "compute/10029-icon-service-Function-Apps.svg"
+				},
+				{
+					"id": "azure-compute-00195-icon-service-maintenance-configuration",
+					"name": "Maintenance Configuration",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/00195-icon-service-Maintenance-Configuration.svg"
+				},
+				{
+					"id": "azure-compute-00328-icon-service-host-pools",
+					"name": "Host Pools",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/00328-icon-service-Host-Pools.svg"
+				},
+				{
+					"id": "azure-compute-00329-icon-service-application-group",
+					"name": "Application Group",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/00329-icon-service-Application-Group.svg"
+				},
+				{
+					"id": "azure-compute-00330-icon-service-workspaces",
+					"name": "Workspaces",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/00330-icon-service-Workspaces.svg"
+				},
+				{
+					"id": "azure-compute-00398-icon-service-disk-encryption-sets",
+					"name": "Disk Encryption Sets",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/00398-icon-service-Disk-Encryption-Sets.svg"
+				},
+				{
+					"id": "azure-compute-00400-icon-service-workspaces",
+					"name": "Workspaces",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/00400-icon-service-Workspaces.svg"
+				},
+				{
+					"id": "azure-compute-02112-icon-service-automanaged-vm",
+					"name": "Automanaged VM",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/02112-icon-service-Automanaged-VM.svg"
+				},
+				{
+					"id": "azure-compute-02370-icon-service-managed-service-fabric",
+					"name": "Managed Service Fabric",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/02370-icon-service-Managed-Service-Fabric.svg"
+				},
+				{
+					"id": "azure-compute-02409-icon-service-metrics-advisor",
+					"name": "Metrics Advisor",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/02409-icon-service-Metrics-Advisor.svg"
+				},
+				{
+					"id": "azure-compute-02634-icon-service-image-templates",
+					"name": "Image Templates",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/02634-icon-service-Image-Templates.svg"
+				},
+				{
+					"id": "azure-compute-02817-icon-service-restore-points",
+					"name": "Restore Points",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/02817-icon-service-Restore-Points.svg"
+				},
+				{
+					"id": "azure-compute-02818-icon-service-restore-points-collections",
+					"name": "Restore Points Collections",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/02818-icon-service-Restore-Points-Collections.svg"
+				},
+				{
+					"id": "azure-compute-02864-icon-service-azure-compute-galleries",
+					"name": "Azure Compute Galleries",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/02864-icon-service-Azure-Compute-Galleries.svg"
+				},
+				{
+					"id": "azure-compute-03487-icon-service-compute-fleet",
+					"name": "Compute Fleet",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/03487-icon-service-Compute-Fleet.svg"
+				},
+				{
+					"id": "azure-compute-03543-icon-service-aks-automatic",
+					"name": "AKS Automatic",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/03543-icon-service-AKS-Automatic.svg"
+				},
+				{
+					"id": "azure-compute-10021-icon-service-virtual-machine",
+					"name": "Virtual Machine",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10021-icon-service-Virtual-Machine.svg"
+				},
+				{
+					"id": "azure-compute-10023-icon-service-kubernetes-services",
+					"name": "Kubernetes Services",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10023-icon-service-Kubernetes-Services.svg"
+				},
+				{
+					"id": "azure-compute-10024-icon-service-mesh-applications",
+					"name": "Mesh Applications",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10024-icon-service-Mesh-Applications.svg"
+				},
+				{
+					"id": "azure-compute-10025-icon-service-availability-sets",
+					"name": "Availability Sets",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10025-icon-service-Availability-Sets.svg"
+				},
+				{
+					"id": "azure-compute-10026-icon-service-disks-snapshots",
+					"name": "Disks Snapshots",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10026-icon-service-Disks-Snapshots.svg"
+				},
+				{
+					"id": "azure-compute-10027-icon-service-os-images-(classic)",
+					"name": "Os Images (classic)",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10027-icon-service-OS-Images-(Classic).svg"
+				},
+				{
+					"id": "azure-compute-10028-icon-service-virtual-machines-(classic)",
+					"name": "Virtual Machines (classic)",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10028-icon-service-Virtual-Machines-(Classic).svg"
+				},
+				{
+					"id": "azure-compute-10029-icon-service-function-apps",
+					"name": "Function Apps",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10029-icon-service-Function-Apps.svg"
+				},
+				{
+					"id": "azure-compute-10030-icon-service-cloud-services-(classic)",
+					"name": "Cloud Services (classic)",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10030-icon-service-Cloud-Services-(Classic).svg"
+				},
+				{
+					"id": "azure-compute-10031-icon-service-batch-accounts",
+					"name": "Batch Accounts",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10031-icon-service-Batch-Accounts.svg"
+				},
+				{
+					"id": "azure-compute-10032-icon-service-disks",
+					"name": "Disks",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10032-icon-service-Disks.svg"
+				},
+				{
+					"id": "azure-compute-10033-icon-service-images",
+					"name": "Images",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10033-icon-service-Images.svg"
+				},
+				{
+					"id": "azure-compute-10034-icon-service-vm-scale-sets",
+					"name": "VM Scale Sets",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10034-icon-service-VM-Scale-Sets.svg"
+				},
+				{
+					"id": "azure-compute-10035-icon-service-app-services",
+					"name": "App Services",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10035-icon-service-App-Services.svg"
+				},
+				{
+					"id": "azure-compute-10036-icon-service-service-fabric-clusters",
+					"name": "Service Fabric Clusters",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10036-icon-service-Service-Fabric-Clusters.svg"
+				},
+				{
+					"id": "azure-compute-10037-icon-service-image-definitions",
+					"name": "Image Definitions",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10037-icon-service-Image-Definitions.svg"
+				},
+				{
+					"id": "azure-compute-10038-icon-service-image-versions",
+					"name": "Image Versions",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10038-icon-service-Image-Versions.svg"
+				},
+				{
+					"id": "azure-compute-10039-icon-service-shared-image-galleries",
+					"name": "Shared Image Galleries",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10039-icon-service-Shared-Image-Galleries.svg"
+				},
+				{
+					"id": "azure-compute-10040-icon-service-vm-images-(classic)",
+					"name": "VM Images (classic)",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10040-icon-service-VM-Images-(Classic).svg"
+				},
+				{
+					"id": "azure-compute-10041-icon-service-disks-(classic)",
+					"name": "Disks (classic)",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10041-icon-service-Disks-(Classic).svg"
+				},
+				{
+					"id": "azure-compute-10049-icon-service-container-services-(deprecated)",
+					"name": "Container Services (deprecated)",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10049-icon-service-Container-Services-(Deprecated).svg"
+				},
+				{
+					"id": "azure-compute-10104-icon-service-container-instances",
+					"name": "Container Instances",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10104-icon-service-Container-Instances.svg"
+				},
+				{
+					"id": "azure-compute-10346-icon-service-host-groups",
+					"name": "Host Groups",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10346-icon-service-Host-Groups.svg"
+				},
+				{
+					"id": "azure-compute-10347-icon-service-hosts",
+					"name": "Hosts",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10347-icon-service-Hosts.svg"
+				},
+				{
+					"id": "azure-compute-10370-icon-service-azure-spring-apps",
+					"name": "Azure Spring Apps",
+					"provider": "azure",
+					"category": "Compute",
+					"tags": [],
+					"svgPath": "compute/10370-icon-service-Azure-Spring-Apps.svg"
+				}
+			]
+		},
+		{
+			"name": "Networking",
+			"icons": [
+				{
+					"id": "azure-networking-virtual-network",
+					"name": "Virtual Network",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [
+						"vnet",
+						"network",
+						"vpc",
+						"subnet"
+					],
+					"svgPath": "networking/10061-icon-service-Virtual-Networks.svg"
+				},
+				{
+					"id": "azure-networking-load-balancer",
+					"name": "Load Balancer",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [
+						"lb",
+						"load",
+						"balance",
+						"traffic"
+					],
+					"svgPath": "networking/10062-icon-service-Load-Balancers.svg"
+				},
+				{
+					"id": "azure-networking-api-management",
+					"name": "API Management",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [
+						"api",
+						"gateway",
+						"apim",
+						"rest"
+					],
+					"svgPath": "integration/10042-icon-service-API-Management-Services.svg"
+				},
+				{
+					"id": "azure-networking-00056-icon-service-cdn-profiles",
+					"name": "Cdn Profiles",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/00056-icon-service-CDN-Profiles.svg"
+				},
+				{
+					"id": "azure-networking-00271-icon-service-azure-firewall-manager",
+					"name": "Azure Firewall Manager",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/00271-icon-service-Azure-Firewall-Manager.svg"
+				},
+				{
+					"id": "azure-networking-00272-icon-service-azure-firewall-policy",
+					"name": "Azure Firewall Policy",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/00272-icon-service-Azure-Firewall-Policy.svg"
+				},
+				{
+					"id": "azure-networking-00427-icon-service-private-link",
+					"name": "Private Link",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/00427-icon-service-Private-Link.svg"
+				},
+				{
+					"id": "azure-networking-00701-icon-service-ip-groups",
+					"name": "Ip Groups",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/00701-icon-service-IP-Groups.svg"
+				},
+				{
+					"id": "azure-networking-00860-icon-service-virtual-wan-hub",
+					"name": "Virtual Wan Hub",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/00860-icon-service-Virtual-WAN-Hub.svg"
+				},
+				{
+					"id": "azure-networking-01105-icon-service-private-link-service",
+					"name": "Private Link Service",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/01105-icon-service-Private-Link-Service.svg"
+				},
+				{
+					"id": "azure-networking-02145-icon-service-resource-management-private-link",
+					"name": "Resource Management Private Link",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/02145-icon-service-Resource-Management-Private-Link.svg"
+				},
+				{
+					"id": "azure-networking-02209-icon-service-private-link-services",
+					"name": "Private Link Services",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/02209-icon-service-Private-Link-Services.svg"
+				},
+				{
+					"id": "azure-networking-02302-icon-service-load-balancer-hub",
+					"name": "Load Balancer Hub",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/02302-icon-service-Load-Balancer-Hub.svg"
+				},
+				{
+					"id": "azure-networking-02422-icon-service-bastions",
+					"name": "Bastions",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/02422-icon-service-Bastions.svg"
+				},
+				{
+					"id": "azure-networking-02496-icon-service-virtual-router",
+					"name": "Virtual Router",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/02496-icon-service-Virtual-Router.svg"
+				},
+				{
+					"id": "azure-networking-02509-icon-service-connected-cache",
+					"name": "Connected Cache",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/02509-icon-service-Connected-Cache.svg"
+				},
+				{
+					"id": "azure-networking-02692-icon-service-spot-vmss",
+					"name": "Spot Vmss",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/02692-icon-service-Spot-VMSS.svg"
+				},
+				{
+					"id": "azure-networking-02695-icon-service-spot-vm",
+					"name": "Spot VM",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/02695-icon-service-Spot-VM.svg"
+				},
+				{
+					"id": "azure-networking-02742-icon-service-subnet",
+					"name": "Subnet",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/02742-icon-service-Subnet.svg"
+				},
+				{
+					"id": "azure-networking-02882-icon-service-dns-private-resolver",
+					"name": "DNS Private Resolver",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/02882-icon-service-DNS-Private-Resolver.svg"
+				},
+				{
+					"id": "azure-networking-03311-icon-service-azure-communications-gateway",
+					"name": "Azure Communications Gateway",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/03311-icon-service-Azure-Communications-Gateway.svg"
+				},
+				{
+					"id": "azure-networking-03328-icon-service-application-gateway-containers",
+					"name": "Application Gateway Containers",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/03328-icon-service-Application-Gateway-Containers.svg"
+				},
+				{
+					"id": "azure-networking-03368-icon-service-dns-security-policy",
+					"name": "DNS Security Policy",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/03368-icon-service-DNS-Security-Policy.svg"
+				},
+				{
+					"id": "azure-networking-03459-icon-service-dns-multistack",
+					"name": "DNS Multistack",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/03459-icon-service-DNS-Multistack.svg"
+				},
+				{
+					"id": "azure-networking-03460-icon-service-atm-multistack",
+					"name": "Atm Multistack",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/03460-icon-service-ATM-Multistack.svg"
+				},
+				{
+					"id": "azure-networking-03461-icon-service-ip-address-manager",
+					"name": "Ip Address Manager",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/03461-icon-service-IP-Address-manager.svg"
+				},
+				{
+					"id": "azure-networking-10061-icon-service-virtual-networks",
+					"name": "Virtual Networks",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10061-icon-service-Virtual-Networks.svg"
+				},
+				{
+					"id": "azure-networking-10062-icon-service-load-balancers",
+					"name": "Load Balancers",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10062-icon-service-Load-Balancers.svg"
+				},
+				{
+					"id": "azure-networking-10063-icon-service-virtual-network-gateways",
+					"name": "Virtual Network Gateways",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10063-icon-service-Virtual-Network-Gateways.svg"
+				},
+				{
+					"id": "azure-networking-10064-icon-service-dns-zones",
+					"name": "DNS Zones",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10064-icon-service-DNS-Zones.svg"
+				},
+				{
+					"id": "azure-networking-10065-icon-service-traffic-manager-profiles",
+					"name": "Traffic Manager Profiles",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10065-icon-service-Traffic-Manager-Profiles.svg"
+				},
+				{
+					"id": "azure-networking-10066-icon-service-network-watcher",
+					"name": "Network Watcher",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10066-icon-service-Network-Watcher.svg"
+				},
+				{
+					"id": "azure-networking-10067-icon-service-network-security-groups",
+					"name": "Network Security Groups",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10067-icon-service-Network-Security-Groups.svg"
+				},
+				{
+					"id": "azure-networking-10068-icon-service-public-ip-addresses-(classic)",
+					"name": "Public Ip Addresses (classic)",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10068-icon-service-Public-IP-Addresses-(Classic).svg"
+				},
+				{
+					"id": "azure-networking-10069-icon-service-public-ip-addresses",
+					"name": "Public Ip Addresses",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10069-icon-service-Public-IP-Addresses.svg"
+				},
+				{
+					"id": "azure-networking-10070-icon-service-on-premises-data-gateways",
+					"name": "On Premises Data Gateways",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10070-icon-service-On-Premises-Data-Gateways.svg"
+				},
+				{
+					"id": "azure-networking-10071-icon-service-route-filters",
+					"name": "Route Filters",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10071-icon-service-Route-Filters.svg"
+				},
+				{
+					"id": "azure-networking-10072-icon-service-ddos-protection-plans",
+					"name": "Ddos Protection Plans",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10072-icon-service-DDoS-Protection-Plans.svg"
+				},
+				{
+					"id": "azure-networking-10073-icon-service-front-door-and-cdn-profiles",
+					"name": "Front Door And Cdn Profiles",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10073-icon-service-Front-Door-and-CDN-Profiles.svg"
+				},
+				{
+					"id": "azure-networking-10075-icon-service-virtual-networks-(classic)",
+					"name": "Virtual Networks (classic)",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10075-icon-service-Virtual-Networks-(Classic).svg"
+				},
+				{
+					"id": "azure-networking-10076-icon-service-application-gateways",
+					"name": "Application Gateways",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10076-icon-service-Application-Gateways.svg"
+				},
+				{
+					"id": "azure-networking-10077-icon-service-local-network-gateways",
+					"name": "Local Network Gateways",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10077-icon-service-Local-Network-Gateways.svg"
+				},
+				{
+					"id": "azure-networking-10079-icon-service-expressroute-circuits",
+					"name": "Expressroute Circuits",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10079-icon-service-ExpressRoute-Circuits.svg"
+				},
+				{
+					"id": "azure-networking-10080-icon-service-network-interfaces",
+					"name": "Network Interfaces",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10080-icon-service-Network-Interfaces.svg"
+				},
+				{
+					"id": "azure-networking-10081-icon-service-connections",
+					"name": "Connections",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10081-icon-service-Connections.svg"
+				},
+				{
+					"id": "azure-networking-10082-icon-service-route-tables",
+					"name": "Route Tables",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10082-icon-service-Route-Tables.svg"
+				},
+				{
+					"id": "azure-networking-10084-icon-service-firewalls",
+					"name": "Firewalls",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10084-icon-service-Firewalls.svg"
+				},
+				{
+					"id": "azure-networking-10085-icon-service-service-endpoint-policies",
+					"name": "Service Endpoint Policies",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10085-icon-service-Service-Endpoint-Policies.svg"
+				},
+				{
+					"id": "azure-networking-10310-icon-service-nat",
+					"name": "Nat",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10310-icon-service-NAT.svg"
+				},
+				{
+					"id": "azure-networking-10353-icon-service-virtual-wans",
+					"name": "Virtual Wans",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10353-icon-service-Virtual-WANs.svg"
+				},
+				{
+					"id": "azure-networking-10362-icon-service-web-application-firewall-policies(waf)",
+					"name": "Web Application Firewall Policies(waf)",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10362-icon-service-Web-Application-Firewall-Policies(WAF).svg"
+				},
+				{
+					"id": "azure-networking-10365-icon-service-proximity-placement-groups",
+					"name": "Proximity Placement Groups",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10365-icon-service-Proximity-Placement-Groups.svg"
+				},
+				{
+					"id": "azure-networking-10371-icon-service-reserved-ip-addresses-(classic)",
+					"name": "Reserved Ip Addresses (classic)",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10371-icon-service-Reserved-IP-Addresses-(Classic).svg"
+				},
+				{
+					"id": "azure-networking-10372-icon-service-public-ip-prefixes",
+					"name": "Public Ip Prefixes",
+					"provider": "azure",
+					"category": "Networking",
+					"tags": [],
+					"svgPath": "networking/10372-icon-service-Public-IP-Prefixes.svg"
+				}
+			]
+		},
+		{
+			"name": "Storage",
+			"icons": [
+				{
+					"id": "azure-storage-storage-accounts",
+					"name": "Storage Accounts",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [
+						"storage",
+						"blob",
+						"file",
+						"table",
+						"queue"
+					],
+					"svgPath": "storage/10086-icon-service-Storage-Accounts.svg"
+				},
+				{
+					"id": "azure-storage-blob-storage",
+					"name": "Blob Storage",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [
+						"blob",
+						"object",
+						"storage",
+						"file"
+					],
+					"svgPath": "general/10780-icon-service-Blob-Block.svg"
+				},
+				{
+					"id": "azure-storage-00017-icon-service-recovery-services-vaults",
+					"name": "Recovery Services Vaults",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/00017-icon-service-Recovery-Services-Vaults.svg"
+				},
+				{
+					"id": "azure-storage-00691-icon-service-azure-databox-gateway",
+					"name": "Azure Databox Gateway",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/00691-icon-service-Azure-Databox-Gateway.svg"
+				},
+				{
+					"id": "azure-storage-00776-icon-service-azure-hcp-cache",
+					"name": "Azure Hcp Cache",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/00776-icon-service-Azure-HCP-Cache.svg"
+				},
+				{
+					"id": "azure-storage-03502-icon-service-storage-actions",
+					"name": "Storage Actions",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/03502-icon-service-Storage-Actions.svg"
+				},
+				{
+					"id": "azure-storage-03549-icon-service-managed-file-shares",
+					"name": "Managed File Shares",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/03549-icon-service-Managed-File-Shares.svg"
+				},
+				{
+					"id": "azure-storage-10086-icon-service-storage-accounts",
+					"name": "Storage Accounts",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/10086-icon-service-Storage-Accounts.svg"
+				},
+				{
+					"id": "azure-storage-10087-icon-service-storage-accounts-(classic)",
+					"name": "Storage Accounts (classic)",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/10087-icon-service-Storage-Accounts-(Classic).svg"
+				},
+				{
+					"id": "azure-storage-10089-icon-service-storsimple-device-managers",
+					"name": "Storsimple Device Managers",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/10089-icon-service-StorSimple-Device-Managers.svg"
+				},
+				{
+					"id": "azure-storage-10090-icon-service-data-lake-storage-gen1",
+					"name": "Data Lake Storage Gen1",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/10090-icon-service-Data-Lake-Storage-Gen1.svg"
+				},
+				{
+					"id": "azure-storage-10091-icon-service-storage-explorer",
+					"name": "Storage Explorer",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/10091-icon-service-Storage-Explorer.svg"
+				},
+				{
+					"id": "azure-storage-10092-icon-service-storsimple-data-managers",
+					"name": "Storsimple Data Managers",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/10092-icon-service-StorSimple-Data-Managers.svg"
+				},
+				{
+					"id": "azure-storage-10093-icon-service-storage-sync-services",
+					"name": "Storage Sync Services",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/10093-icon-service-Storage-Sync-Services.svg"
+				},
+				{
+					"id": "azure-storage-10094-icon-service-data-box",
+					"name": "Data Box",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/10094-icon-service-Data-Box.svg"
+				},
+				{
+					"id": "azure-storage-10095-icon-service-azure-stack-edge",
+					"name": "Azure Stack Edge",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/10095-icon-service-Azure-Stack-Edge.svg"
+				},
+				{
+					"id": "azure-storage-10096-icon-service-azure-netapp-files",
+					"name": "Azure Netapp Files",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/10096-icon-service-Azure-NetApp-Files.svg"
+				},
+				{
+					"id": "azure-storage-10097-icon-service-data-share-invitations",
+					"name": "Data Share Invitations",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/10097-icon-service-Data-Share-Invitations.svg"
+				},
+				{
+					"id": "azure-storage-10098-icon-service-data-shares",
+					"name": "Data Shares",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/10098-icon-service-Data-Shares.svg"
+				},
+				{
+					"id": "azure-storage-10100-icon-service-import-export-jobs",
+					"name": "Import Export Jobs",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/10100-icon-service-Import-Export-Jobs.svg"
+				},
+				{
+					"id": "azure-storage-10400-icon-service-azure-fileshares",
+					"name": "Azure Fileshares",
+					"provider": "azure",
+					"category": "Storage",
+					"tags": [],
+					"svgPath": "storage/10400-icon-service-Azure-Fileshares.svg"
+				}
+			]
+		},
+		{
+			"name": "Databases",
+			"icons": [
+				{
+					"id": "azure-databases-sql-database",
+					"name": "SQL Database",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [
+						"sql",
+						"database",
+						"relational",
+						"rdbms"
+					],
+					"svgPath": "databases/10130-icon-service-SQL-Database.svg"
+				},
+				{
+					"id": "azure-databases-cosmos-db",
+					"name": "Cosmos DB",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [
+						"cosmos",
+						"nosql",
+						"document",
+						"global",
+						"distributed"
+					],
+					"svgPath": "databases/10121-icon-service-Azure-Cosmos-DB.svg"
+				},
+				{
+					"id": "azure-databases-00036-icon-service-sql-data-warehouses",
+					"name": "SQL Data Warehouses",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/00036-icon-service-SQL-Data-Warehouses.svg"
+				},
+				{
+					"id": "azure-databases-00606-icon-service-azure-synapse-analytics",
+					"name": "Azure Synapse Analytics",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/00606-icon-service-Azure-Synapse-Analytics.svg"
+				},
+				{
+					"id": "azure-databases-02390-icon-service-azure-sql",
+					"name": "Azure SQL",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/02390-icon-service-Azure-SQL.svg"
+				},
+				{
+					"id": "azure-databases-02392-icon-service-ssis-lift-and-shift-ir",
+					"name": "Ssis Lift And Shift Ir",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/02392-icon-service-SSIS-Lift-And-Shift-IR.svg"
+				},
+				{
+					"id": "azure-databases-02750-icon-service-azure-sql-edge",
+					"name": "Azure SQL Edge",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/02750-icon-service-Azure-SQL-Edge.svg"
+				},
+				{
+					"id": "azure-databases-02827-icon-service-azure-database-postgresql-server-group",
+					"name": "Azure Database Postgresql Server Group",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/02827-icon-service-Azure-Database-PostgreSQL-Server-Group.svg"
+				},
+				{
+					"id": "azure-databases-03490-icon-service-oracle-database",
+					"name": "Oracle Database",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/03490-icon-service-Oracle-Database.svg"
+				},
+				{
+					"id": "azure-databases-10121-icon-service-azure-cosmos-db",
+					"name": "Azure Cosmos DB",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10121-icon-service-Azure-Cosmos-DB.svg"
+				},
+				{
+					"id": "azure-databases-10122-icon-service-azure-database-mysql-server",
+					"name": "Azure Database Mysql Server",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10122-icon-service-Azure-Database-MySQL-Server.svg"
+				},
+				{
+					"id": "azure-databases-10123-icon-service-azure-database-mariadb-server",
+					"name": "Azure Database Mariadb Server",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10123-icon-service-Azure-Database-MariaDB-Server.svg"
+				},
+				{
+					"id": "azure-databases-10124-icon-service-azure-sql-vm",
+					"name": "Azure SQL VM",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10124-icon-service-Azure-SQL-VM.svg"
+				},
+				{
+					"id": "azure-databases-10126-icon-service-data-factories",
+					"name": "Data Factories",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10126-icon-service-Data-Factories.svg"
+				},
+				{
+					"id": "azure-databases-10127-icon-service-virtual-clusters",
+					"name": "Virtual Clusters",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10127-icon-service-Virtual-Clusters.svg"
+				},
+				{
+					"id": "azure-databases-10128-icon-service-elastic-job-agents",
+					"name": "Elastic Job Agents",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10128-icon-service-Elastic-Job-Agents.svg"
+				},
+				{
+					"id": "azure-databases-10130-icon-service-sql-database",
+					"name": "SQL Database",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10130-icon-service-SQL-Database.svg"
+				},
+				{
+					"id": "azure-databases-10131-icon-service-azure-database-postgresql-server",
+					"name": "Azure Database Postgresql Server",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10131-icon-service-Azure-Database-PostgreSQL-Server.svg"
+				},
+				{
+					"id": "azure-databases-10132-icon-service-sql-server",
+					"name": "SQL Server",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10132-icon-service-SQL-Server.svg"
+				},
+				{
+					"id": "azure-databases-10133-icon-service-azure-database-migration-services",
+					"name": "Azure Database Migration Services",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10133-icon-service-Azure-Database-Migration-Services.svg"
+				},
+				{
+					"id": "azure-databases-10134-icon-service-sql-elastic-pools",
+					"name": "SQL Elastic Pools",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10134-icon-service-SQL-Elastic-Pools.svg"
+				},
+				{
+					"id": "azure-databases-10135-icon-service-managed-database",
+					"name": "Managed Database",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10135-icon-service-Managed-Database.svg"
+				},
+				{
+					"id": "azure-databases-10136-icon-service-sql-managed-instance",
+					"name": "SQL Managed Instance",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10136-icon-service-SQL-Managed-Instance.svg"
+				},
+				{
+					"id": "azure-databases-10137-icon-service-azure-sql-server-stretch-databases",
+					"name": "Azure SQL Server Stretch Databases",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10137-icon-service-Azure-SQL-Server-Stretch-Databases.svg"
+				},
+				{
+					"id": "azure-databases-10137-icon-service-cache-redis",
+					"name": "Cache Redis",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10137-icon-service-Cache-Redis.svg"
+				},
+				{
+					"id": "azure-databases-10139-icon-service-instance-pools",
+					"name": "Instance Pools",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10139-icon-service-Instance-Pools.svg"
+				},
+				{
+					"id": "azure-databases-10145-icon-service-azure-data-explorer-clusters",
+					"name": "Azure Data Explorer Clusters",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10145-icon-service-Azure-Data-Explorer-Clusters.svg"
+				},
+				{
+					"id": "azure-databases-10351-icon-service-sql-server-registries",
+					"name": "SQL Server Registries",
+					"provider": "azure",
+					"category": "Databases",
+					"tags": [],
+					"svgPath": "databases/10351-icon-service-SQL-Server-Registries.svg"
+				}
+			]
+		},
+		{
+			"name": "Security",
+			"icons": [
+				{
+					"id": "azure-security-key-vault",
+					"name": "Key Vault",
+					"provider": "azure",
+					"category": "Security",
+					"tags": [
+						"key",
+						"vault",
+						"secret",
+						"certificate",
+						"security"
+					],
+					"svgPath": "security/10245-icon-service-Key-Vaults.svg"
+				},
+				{
+					"id": "azure-security-00378-icon-service-detonation",
+					"name": "Detonation",
+					"provider": "azure",
+					"category": "Security",
+					"tags": [],
+					"svgPath": "security/00378-icon-service-Detonation.svg"
+				},
+				{
+					"id": "azure-security-02247-icon-service-microsoft-defender-for-iot",
+					"name": "Microsoft Defender For IOT",
+					"provider": "azure",
+					"category": "Security",
+					"tags": [],
+					"svgPath": "security/02247-icon-service-Microsoft-Defender-for-IoT.svg"
+				},
+				{
+					"id": "azure-security-03336-icon-service-microsoft-defender-easm",
+					"name": "Microsoft Defender Easm",
+					"provider": "azure",
+					"category": "Security",
+					"tags": [],
+					"svgPath": "security/03336-icon-service-Microsoft-Defender-EASM.svg"
+				},
+				{
+					"id": "azure-security-03340-icon-service-identity-secure-score",
+					"name": "Identity Secure Score",
+					"provider": "azure",
+					"category": "Security",
+					"tags": [],
+					"svgPath": "security/03340-icon-service-Identity-Secure-Score.svg"
+				},
+				{
+					"id": "azure-security-03341-icon-service-entra-identity-risky-signins",
+					"name": "Entra Identity Risky Signins",
+					"provider": "azure",
+					"category": "Security",
+					"tags": [],
+					"svgPath": "security/03341-icon-service-Entra-Identity-Risky-Signins.svg"
+				},
+				{
+					"id": "azure-security-03342-icon-service-entra-identity-risky-users",
+					"name": "Entra Identity Risky Users",
+					"provider": "azure",
+					"category": "Security",
+					"tags": [],
+					"svgPath": "security/03342-icon-service-Entra-Identity-Risky-Users.svg"
+				},
+				{
+					"id": "azure-security-03344-icon-service-multifactor-authentication",
+					"name": "Multifactor Authentication",
+					"provider": "azure",
+					"category": "Security",
+					"tags": [],
+					"svgPath": "security/03344-icon-service-Multifactor-Authentication.svg"
+				},
+				{
+					"id": "azure-security-10229-icon-service-azure-information-protection",
+					"name": "Azure Information Protection",
+					"provider": "azure",
+					"category": "Security",
+					"tags": [],
+					"svgPath": "security/10229-icon-service-Azure-Information-Protection.svg"
+				},
+				{
+					"id": "azure-security-10233-icon-service-conditional-access",
+					"name": "Conditional Access",
+					"provider": "azure",
+					"category": "Security",
+					"tags": [],
+					"svgPath": "security/10233-icon-service-Conditional-Access.svg"
+				},
+				{
+					"id": "azure-security-10241-icon-service-microsoft-defender-for-cloud",
+					"name": "Microsoft Defender For Cloud",
+					"provider": "azure",
+					"category": "Security",
+					"tags": [],
+					"svgPath": "security/10241-icon-service-Microsoft-Defender-for-Cloud.svg"
+				},
+				{
+					"id": "azure-security-10244-icon-service-application-security-groups",
+					"name": "Application Security Groups",
+					"provider": "azure",
+					"category": "Security",
+					"tags": [],
+					"svgPath": "security/10244-icon-service-Application-Security-Groups.svg"
+				},
+				{
+					"id": "azure-security-10245-icon-service-key-vaults",
+					"name": "Key Vaults",
+					"provider": "azure",
+					"category": "Security",
+					"tags": [],
+					"svgPath": "security/10245-icon-service-Key-Vaults.svg"
+				},
+				{
+					"id": "azure-security-10248-icon-service-azure-sentinel",
+					"name": "Azure Sentinel",
+					"provider": "azure",
+					"category": "Security",
+					"tags": [],
+					"svgPath": "security/10248-icon-service-Azure-Sentinel.svg"
+				},
+				{
+					"id": "azure-security-10433-icon-service-user-settings",
+					"name": "User Settings",
+					"provider": "azure",
+					"category": "Security",
+					"tags": [],
+					"svgPath": "security/10433-icon-service-User-Settings.svg"
+				},
+				{
+					"id": "azure-security-10572-icon-service-extendedsecurityupdates",
+					"name": "Extendedsecurityupdates",
+					"provider": "azure",
+					"category": "Security",
+					"tags": [],
+					"svgPath": "security/10572-icon-service-ExtendedSecurityUpdates.svg"
+				}
+			]
+		},
+		{
+			"name": "AI + Machine Learning",
+			"icons": [
+				{
+					"id": "azure-ai-cognitive-services",
+					"name": "Cognitive Services",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [
+						"ai",
+						"ml",
+						"cognitive",
+						"vision",
+						"speech",
+						"nlp"
+					],
+					"svgPath": "ai + machine learning/10162-icon-service-Cognitive-Services.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-00028-icon-service-batch-ai",
+					"name": "Batch Ai",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/00028-icon-service-Batch-AI.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-00030-icon-service-machine-learning-studio-(classic)-web-services",
+					"name": "Machine Learning Studio (classic) Web Services",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/00030-icon-service-Machine-Learning-Studio-(Classic)-Web-Services.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-00031-icon-service-genomics",
+					"name": "Genomics",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/00031-icon-service-Genomics.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-00792-icon-service-computer-vision",
+					"name": "Computer Vision",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/00792-icon-service-Computer-Vision.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-00793-icon-service-custom-vision",
+					"name": "Custom Vision",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/00793-icon-service-Custom-Vision.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-00794-icon-service-face-apis",
+					"name": "Face Apis",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/00794-icon-service-Face-APIs.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-00795-icon-service-content-moderators",
+					"name": "Content Moderators",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/00795-icon-service-Content-Moderators.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-00796-icon-service-personalizers",
+					"name": "Personalizers",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/00796-icon-service-Personalizers.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-00797-icon-service-speech-services",
+					"name": "Speech Services",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/00797-icon-service-Speech-Services.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-00799-icon-service-qna-makers",
+					"name": "Qna Makers",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/00799-icon-service-QnA-Makers.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-00800-icon-service-translator-text",
+					"name": "Translator Text",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/00800-icon-service-Translator-Text.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-00801-icon-service-language-understanding",
+					"name": "Language Understanding",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/00801-icon-service-Language-Understanding.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-00812-icon-service-immersive-readers",
+					"name": "Immersive Readers",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/00812-icon-service-Immersive-Readers.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-00814-icon-service-anomaly-detector",
+					"name": "Anomaly Detector",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/00814-icon-service-Anomaly-Detector.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-00819-icon-service-form-recognizers",
+					"name": "Form Recognizers",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/00819-icon-service-Form-Recognizers.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-01239-icon-service-azure-experimentation-studio",
+					"name": "Azure Experimentation Studio",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/01239-icon-service-Azure-Experimentation-Studio.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-01688-icon-service-azure-object-understanding",
+					"name": "Azure Object Understanding",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/01688-icon-service-Azure-Object-Understanding.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-02409-icon-service-metrics-advisor",
+					"name": "Metrics Advisor",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/02409-icon-service-Metrics-Advisor.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-02749-icon-service-azure-applied-ai-services",
+					"name": "Azure Applied Ai Services",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/02749-icon-service-Azure-Applied-AI-Services.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-02876-icon-service-language",
+					"name": "Language",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/02876-icon-service-Language.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-03173-icon-service-cognitive-services-decisions",
+					"name": "Cognitive Services Decisions",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/03173-icon-service-Cognitive-Services-Decisions.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-03321-icon-service-serverless-search",
+					"name": "Serverless Search",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/03321-icon-service-Serverless-Search.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-03337-icon-service-bonsai",
+					"name": "Bonsai",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/03337-icon-service-Bonsai.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-03390-icon-service-content-safety",
+					"name": "Content Safety",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/03390-icon-service-Content-Safety.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-03438-icon-service-azure-openai",
+					"name": "Azure Openai",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/03438-icon-service-Azure-OpenAI.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-03513-icon-service-ai-studio",
+					"name": "Ai Studio",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/03513-icon-service-AI-Studio.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-10044-icon-service-cognitive-search",
+					"name": "Cognitive Search",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/10044-icon-service-Cognitive-Search.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-10162-icon-service-cognitive-services",
+					"name": "Cognitive Services",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/10162-icon-service-Cognitive-Services.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-10164-icon-service-genomics-accounts",
+					"name": "Genomics Accounts",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/10164-icon-service-Genomics-Accounts.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-10165-icon-service-bot-services",
+					"name": "Bot Services",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/10165-icon-service-Bot-Services.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-10166-icon-service-machine-learning",
+					"name": "Machine Learning",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/10166-icon-service-Machine-Learning.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-10167-icon-service-machine-learning-studio-workspaces",
+					"name": "Machine Learning Studio Workspaces",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/10167-icon-service-Machine-Learning-Studio-Workspaces.svg"
+				},
+				{
+					"id": "azure-ai-machine-learning-10168-icon-service-machine-learning-studio-web-service-plans",
+					"name": "Machine Learning Studio Web Service Plans",
+					"provider": "azure",
+					"category": "AI + Machine Learning",
+					"tags": [],
+					"svgPath": "ai + machine learning/10168-icon-service-Machine-Learning-Studio-Web-Service-Plans.svg"
+				}
+			]
+		},
+		{
+			"name": "Analytics",
+			"icons": [
+				{
+					"id": "azure-analytics-00009-icon-service-log-analytics-workspaces",
+					"name": "Log Analytics Workspaces",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/00009-icon-service-Log-Analytics-Workspaces.svg"
+				},
+				{
+					"id": "azure-analytics-00039-icon-service-event-hubs",
+					"name": "Event Hubs",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/00039-icon-service-Event-Hubs.svg"
+				},
+				{
+					"id": "azure-analytics-00042-icon-service-stream-analytics-jobs",
+					"name": "Stream Analytics Jobs",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/00042-icon-service-Stream-Analytics-Jobs.svg"
+				},
+				{
+					"id": "azure-analytics-00562-icon-service-endpoint-analytics",
+					"name": "Endpoint Analytics",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/00562-icon-service-Endpoint-Analytics.svg"
+				},
+				{
+					"id": "azure-analytics-00606-icon-service-azure-synapse-analytics",
+					"name": "Azure Synapse Analytics",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/00606-icon-service-Azure-Synapse-Analytics.svg"
+				},
+				{
+					"id": "azure-analytics-02189-icon-service-azure-workbooks",
+					"name": "Azure Workbooks",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/02189-icon-service-Azure-Workbooks.svg"
+				},
+				{
+					"id": "azure-analytics-02209-icon-service-private-link-services",
+					"name": "Private Link Services",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/02209-icon-service-Private-Link-Services.svg"
+				},
+				{
+					"id": "azure-analytics-03332-icon-service-power-bi-embedded",
+					"name": "Power Bi Embedded",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/03332-icon-service-Power-BI-Embedded.svg"
+				},
+				{
+					"id": "azure-analytics-03335-icon-service-power-platform",
+					"name": "Power Platform",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/03335-icon-service-Power-Platform.svg"
+				},
+				{
+					"id": "azure-analytics-10126-icon-service-data-factories",
+					"name": "Data Factories",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/10126-icon-service-Data-Factories.svg"
+				},
+				{
+					"id": "azure-analytics-10142-icon-service-hd-insight-clusters",
+					"name": "HD Insight Clusters",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/10142-icon-service-HD-Insight-Clusters.svg"
+				},
+				{
+					"id": "azure-analytics-10143-icon-service-data-lake-analytics",
+					"name": "Data Lake Analytics",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/10143-icon-service-Data-Lake-Analytics.svg"
+				},
+				{
+					"id": "azure-analytics-10145-icon-service-azure-data-explorer-clusters",
+					"name": "Azure Data Explorer Clusters",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/10145-icon-service-Azure-Data-Explorer-Clusters.svg"
+				},
+				{
+					"id": "azure-analytics-10148-icon-service-analysis-services",
+					"name": "Analysis Services",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/10148-icon-service-Analysis-Services.svg"
+				},
+				{
+					"id": "azure-analytics-10149-icon-service-event-hub-clusters",
+					"name": "Event Hub Clusters",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/10149-icon-service-Event-Hub-Clusters.svg"
+				},
+				{
+					"id": "azure-analytics-10150-icon-service-data-lake-store-gen1",
+					"name": "Data Lake Store Gen1",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/10150-icon-service-Data-Lake-Store-Gen1.svg"
+				},
+				{
+					"id": "azure-analytics-10787-icon-service-azure-databricks",
+					"name": "Azure Databricks",
+					"provider": "azure",
+					"category": "Analytics",
+					"tags": [],
+					"svgPath": "analytics/10787-icon-service-Azure-Databricks.svg"
+				}
+			]
+		},
+		{
+			"name": "App Services",
+			"icons": [
+				{
+					"id": "azure-app-services-00046-icon-service-app-service-plans",
+					"name": "App Service Plans",
+					"provider": "azure",
+					"category": "App Services",
+					"tags": [],
+					"svgPath": "app services/00046-icon-service-App-Service-Plans.svg"
+				},
+				{
+					"id": "azure-app-services-00049-icon-service-app-service-certificates",
+					"name": "App Service Certificates",
+					"provider": "azure",
+					"category": "App Services",
+					"tags": [],
+					"svgPath": "app services/00049-icon-service-App-Service-Certificates.svg"
+				},
+				{
+					"id": "azure-app-services-00050-icon-service-app-service-domains",
+					"name": "App Service Domains",
+					"provider": "azure",
+					"category": "App Services",
+					"tags": [],
+					"svgPath": "app services/00050-icon-service-App-Service-Domains.svg"
+				},
+				{
+					"id": "azure-app-services-00056-icon-service-cdn-profiles",
+					"name": "Cdn Profiles",
+					"provider": "azure",
+					"category": "App Services",
+					"tags": [],
+					"svgPath": "app services/00056-icon-service-CDN-Profiles.svg"
+				},
+				{
+					"id": "azure-app-services-10035-icon-service-app-services",
+					"name": "App Services",
+					"provider": "azure",
+					"category": "App Services",
+					"tags": [],
+					"svgPath": "app services/10035-icon-service-App-Services.svg"
+				},
+				{
+					"id": "azure-app-services-10044-icon-service-cognitive-search",
+					"name": "Cognitive Search",
+					"provider": "azure",
+					"category": "App Services",
+					"tags": [],
+					"svgPath": "app services/10044-icon-service-Cognitive-Search.svg"
+				},
+				{
+					"id": "azure-app-services-10045-icon-service-notification-hubs",
+					"name": "Notification Hubs",
+					"provider": "azure",
+					"category": "App Services",
+					"tags": [],
+					"svgPath": "app services/10045-icon-service-Notification-Hubs.svg"
+				},
+				{
+					"id": "azure-app-services-10047-icon-service-app-service-environments",
+					"name": "App Service Environments",
+					"provider": "azure",
+					"category": "App Services",
+					"tags": [],
+					"svgPath": "app services/10047-icon-service-App-Service-Environments.svg"
+				}
+			]
+		},
+		{
+			"name": "Azure Ecosystem",
+			"icons": [
+				{
+					"id": "azure-azure-ecosystem-01038-icon-service-collaborative-service",
+					"name": "Collaborative Service",
+					"provider": "azure",
+					"category": "Azure Ecosystem",
+					"tags": [],
+					"svgPath": "azure ecosystem/01038-icon-service-Collaborative-Service.svg"
+				},
+				{
+					"id": "azure-azure-ecosystem-02354-icon-service-applens",
+					"name": "Applens",
+					"provider": "azure",
+					"category": "Azure Ecosystem",
+					"tags": [],
+					"svgPath": "azure ecosystem/02354-icon-service-Applens.svg"
+				},
+				{
+					"id": "azure-azure-ecosystem-02573-icon-service-azure-hybrid-center",
+					"name": "Azure Hybrid Center",
+					"provider": "azure",
+					"category": "Azure Ecosystem",
+					"tags": [],
+					"svgPath": "azure ecosystem/02573-icon-service-Azure-Hybrid-Center.svg"
+				}
+			]
+		},
+		{
+			"name": "Azure Stack",
+			"icons": [
+				{
+					"id": "azure-azure-stack-00965-icon-service-multi-tenancy",
+					"name": "Multi Tenancy",
+					"provider": "azure",
+					"category": "Azure Stack",
+					"tags": [],
+					"svgPath": "azure stack/00965-icon-service-Multi-Tenancy.svg"
+				},
+				{
+					"id": "azure-azure-stack-10108-icon-service-infrastructure-backup",
+					"name": "Infrastructure Backup",
+					"provider": "azure",
+					"category": "Azure Stack",
+					"tags": [],
+					"svgPath": "azure stack/10108-icon-service-Infrastructure-Backup.svg"
+				},
+				{
+					"id": "azure-azure-stack-10109-icon-service-capacity",
+					"name": "Capacity",
+					"provider": "azure",
+					"category": "Azure Stack",
+					"tags": [],
+					"svgPath": "azure stack/10109-icon-service-Capacity.svg"
+				},
+				{
+					"id": "azure-azure-stack-10110-icon-service-offers",
+					"name": "Offers",
+					"provider": "azure",
+					"category": "Azure Stack",
+					"tags": [],
+					"svgPath": "azure stack/10110-icon-service-Offers.svg"
+				},
+				{
+					"id": "azure-azure-stack-10111-icon-service-user-subscriptions",
+					"name": "User Subscriptions",
+					"provider": "azure",
+					"category": "Azure Stack",
+					"tags": [],
+					"svgPath": "azure stack/10111-icon-service-User-Subscriptions.svg"
+				},
+				{
+					"id": "azure-azure-stack-10113-icon-service-plans",
+					"name": "Plans",
+					"provider": "azure",
+					"category": "Azure Stack",
+					"tags": [],
+					"svgPath": "azure stack/10113-icon-service-Plans.svg"
+				},
+				{
+					"id": "azure-azure-stack-10115-icon-service-updates",
+					"name": "Updates",
+					"provider": "azure",
+					"category": "Azure Stack",
+					"tags": [],
+					"svgPath": "azure stack/10115-icon-service-Updates.svg"
+				}
+			]
+		},
+		{
+			"name": "Blockchain",
+			"icons": [
+				{
+					"id": "azure-blockchain-10210-icon-service-blockchain-applications",
+					"name": "Blockchain Applications",
+					"provider": "azure",
+					"category": "Blockchain",
+					"tags": [],
+					"svgPath": "blockchain/10210-icon-service-Blockchain-Applications.svg"
+				},
+				{
+					"id": "azure-blockchain-10364-icon-service-outbound-connection",
+					"name": "Outbound Connection",
+					"provider": "azure",
+					"category": "Blockchain",
+					"tags": [],
+					"svgPath": "blockchain/10364-icon-service-Outbound-Connection.svg"
+				},
+				{
+					"id": "azure-blockchain-10366-icon-service-azure-blockchain-service",
+					"name": "Azure Blockchain Service",
+					"provider": "azure",
+					"category": "Blockchain",
+					"tags": [],
+					"svgPath": "blockchain/10366-icon-service-Azure-Blockchain-Service.svg"
+				},
+				{
+					"id": "azure-blockchain-10367-icon-service-azure-token-service",
+					"name": "Azure Token Service",
+					"provider": "azure",
+					"category": "Blockchain",
+					"tags": [],
+					"svgPath": "blockchain/10367-icon-service-Azure-Token-Service.svg"
+				},
+				{
+					"id": "azure-blockchain-10374-icon-service-abs-member",
+					"name": "Abs Member",
+					"provider": "azure",
+					"category": "Blockchain",
+					"tags": [],
+					"svgPath": "blockchain/10374-icon-service-ABS-Member.svg"
+				},
+				{
+					"id": "azure-blockchain-10375-icon-service-consortium",
+					"name": "Consortium",
+					"provider": "azure",
+					"category": "Blockchain",
+					"tags": [],
+					"svgPath": "blockchain/10375-icon-service-Consortium.svg"
+				}
+			]
+		},
+		{
+			"name": "Containers",
+			"icons": [
+				{
+					"id": "azure-containers-03331-icon-service-azure-red-hat-openshift",
+					"name": "Azure Red Hat Openshift",
+					"provider": "azure",
+					"category": "Containers",
+					"tags": [],
+					"svgPath": "containers/03331-icon-service-Azure-Red-Hat-OpenShift.svg"
+				},
+				{
+					"id": "azure-containers-10023-icon-service-kubernetes-services",
+					"name": "Kubernetes Services",
+					"provider": "azure",
+					"category": "Containers",
+					"tags": [],
+					"svgPath": "containers/10023-icon-service-Kubernetes-Services.svg"
+				},
+				{
+					"id": "azure-containers-10031-icon-service-batch-accounts",
+					"name": "Batch Accounts",
+					"provider": "azure",
+					"category": "Containers",
+					"tags": [],
+					"svgPath": "containers/10031-icon-service-Batch-Accounts.svg"
+				},
+				{
+					"id": "azure-containers-10035-icon-service-app-services",
+					"name": "App Services",
+					"provider": "azure",
+					"category": "Containers",
+					"tags": [],
+					"svgPath": "containers/10035-icon-service-App-Services.svg"
+				},
+				{
+					"id": "azure-containers-10036-icon-service-service-fabric-clusters",
+					"name": "Service Fabric Clusters",
+					"provider": "azure",
+					"category": "Containers",
+					"tags": [],
+					"svgPath": "containers/10036-icon-service-Service-Fabric-Clusters.svg"
+				},
+				{
+					"id": "azure-containers-10104-icon-service-container-instances",
+					"name": "Container Instances",
+					"provider": "azure",
+					"category": "Containers",
+					"tags": [],
+					"svgPath": "containers/10104-icon-service-Container-Instances.svg"
+				},
+				{
+					"id": "azure-containers-10105-icon-service-container-registries",
+					"name": "Container Registries",
+					"provider": "azure",
+					"category": "Containers",
+					"tags": [],
+					"svgPath": "containers/10105-icon-service-Container-Registries.svg"
+				}
+			]
+		},
+		{
+			"name": "Devops",
+			"icons": [
+				{
+					"id": "azure-devops-00012-icon-service-application-insights",
+					"name": "Application Insights",
+					"provider": "azure",
+					"category": "Devops",
+					"tags": [],
+					"svgPath": "devops/00012-icon-service-Application-Insights.svg"
+				},
+				{
+					"id": "azure-devops-00563-icon-service-change-analysis",
+					"name": "Change Analysis",
+					"provider": "azure",
+					"category": "Devops",
+					"tags": [],
+					"svgPath": "devops/00563-icon-service-Change-Analysis.svg"
+				},
+				{
+					"id": "azure-devops-02373-icon-service-cloudtest",
+					"name": "Cloudtest",
+					"provider": "azure",
+					"category": "Devops",
+					"tags": [],
+					"svgPath": "devops/02373-icon-service-CloudTest.svg"
+				},
+				{
+					"id": "azure-devops-02423-icon-service-load-testing",
+					"name": "Load Testing",
+					"provider": "azure",
+					"category": "Devops",
+					"tags": [],
+					"svgPath": "devops/02423-icon-service-Load-Testing.svg"
+				},
+				{
+					"id": "azure-devops-02761-icon-service-lab-accounts",
+					"name": "Lab Accounts",
+					"provider": "azure",
+					"category": "Devops",
+					"tags": [],
+					"svgPath": "devops/02761-icon-service-Lab-Accounts.svg"
+				},
+				{
+					"id": "azure-devops-03339-icon-service-devops-starter",
+					"name": "Devops Starter",
+					"provider": "azure",
+					"category": "Devops",
+					"tags": [],
+					"svgPath": "devops/03339-icon-service-DevOps-Starter.svg"
+				},
+				{
+					"id": "azure-devops-03393-icon-service-managed-devops-pools",
+					"name": "Managed Devops Pools",
+					"provider": "azure",
+					"category": "Devops",
+					"tags": [],
+					"svgPath": "devops/03393-icon-service-Managed-DevOps-Pools.svg"
+				},
+				{
+					"id": "azure-devops-03455-icon-service-code-optimization",
+					"name": "Code Optimization",
+					"provider": "azure",
+					"category": "Devops",
+					"tags": [],
+					"svgPath": "devops/03455-icon-service-Code-Optimization.svg"
+				},
+				{
+					"id": "azure-devops-03623-icon-service-workspace-gateway",
+					"name": "Workspace Gateway",
+					"provider": "azure",
+					"category": "Devops",
+					"tags": [],
+					"svgPath": "devops/03623-icon-service-Workspace-Gateway.svg"
+				},
+				{
+					"id": "azure-devops-10042-icon-service-api-management-services",
+					"name": "API Management Services",
+					"provider": "azure",
+					"category": "Devops",
+					"tags": [],
+					"svgPath": "devops/10042-icon-service-API-Management-Services.svg"
+				},
+				{
+					"id": "azure-devops-10048-icon-service-api-connections",
+					"name": "API Connections",
+					"provider": "azure",
+					"category": "Devops",
+					"tags": [],
+					"svgPath": "devops/10048-icon-service-API-Connections.svg"
+				},
+				{
+					"id": "azure-devops-10261-icon-service-azure-devops",
+					"name": "Azure Devops",
+					"provider": "azure",
+					"category": "Devops",
+					"tags": [],
+					"svgPath": "devops/10261-icon-service-Azure-DevOps.svg"
+				},
+				{
+					"id": "azure-devops-10264-icon-service-devtest-labs",
+					"name": "Devtest Labs",
+					"provider": "azure",
+					"category": "Devops",
+					"tags": [],
+					"svgPath": "devops/10264-icon-service-DevTest-Labs.svg"
+				},
+				{
+					"id": "azure-devops-10265-icon-service-lab-services",
+					"name": "Lab Services",
+					"provider": "azure",
+					"category": "Devops",
+					"tags": [],
+					"svgPath": "devops/10265-icon-service-Lab-Services.svg"
+				}
+			]
+		},
+		{
+			"name": "General",
+			"icons": [
+				{
+					"id": "azure-general-00004-icon-service-cost-management-and-billing",
+					"name": "Cost Management And Billing",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/00004-icon-service-Cost-Management-and-Billing.svg"
+				},
+				{
+					"id": "azure-general-00456-icon-service-preview-features",
+					"name": "Preview Features",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/00456-icon-service-Preview-Features.svg"
+				},
+				{
+					"id": "azure-general-10001-icon-service-all-resources",
+					"name": "All Resources",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10001-icon-service-All-Resources.svg"
+				},
+				{
+					"id": "azure-general-10002-icon-service-subscriptions",
+					"name": "Subscriptions",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10002-icon-service-Subscriptions.svg"
+				},
+				{
+					"id": "azure-general-10003-icon-service-reservations",
+					"name": "Reservations",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10003-icon-service-Reservations.svg"
+				},
+				{
+					"id": "azure-general-10004-icon-service-service-health",
+					"name": "Service Health",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10004-icon-service-Service-Health.svg"
+				},
+				{
+					"id": "azure-general-10005-icon-service-information",
+					"name": "Information",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10005-icon-service-Information.svg"
+				},
+				{
+					"id": "azure-general-10006-icon-service-recent",
+					"name": "Recent",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10006-icon-service-Recent.svg"
+				},
+				{
+					"id": "azure-general-10007-icon-service-resource-groups",
+					"name": "Resource Groups",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10007-icon-service-Resource-Groups.svg"
+				},
+				{
+					"id": "azure-general-10008-icon-service-marketplace",
+					"name": "Marketplace",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10008-icon-service-Marketplace.svg"
+				},
+				{
+					"id": "azure-general-10009-icon-service-templates",
+					"name": "Templates",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10009-icon-service-Templates.svg"
+				},
+				{
+					"id": "azure-general-10010-icon-service-quickstart-center",
+					"name": "Quickstart Center",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10010-icon-service-Quickstart-Center.svg"
+				},
+				{
+					"id": "azure-general-10011-icon-service-management-groups",
+					"name": "Management Groups",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10011-icon-service-Management-Groups.svg"
+				},
+				{
+					"id": "azure-general-10013-icon-service-help-and-support",
+					"name": "Help And Support",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10013-icon-service-Help-and-Support.svg"
+				},
+				{
+					"id": "azure-general-10014-icon-service-tag",
+					"name": "Tag",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10014-icon-service-Tag.svg"
+				},
+				{
+					"id": "azure-general-10015-icon-service-dashboard",
+					"name": "Dashboard",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10015-icon-service-Dashboard.svg"
+				},
+				{
+					"id": "azure-general-10016-icon-service-free-services",
+					"name": "Free Services",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10016-icon-service-Free-Services.svg"
+				},
+				{
+					"id": "azure-general-10019-icon-service-cost-management",
+					"name": "Cost Management",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10019-icon-service-Cost-Management.svg"
+				},
+				{
+					"id": "azure-general-10112-icon-service-marketplace-management",
+					"name": "Marketplace Management",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10112-icon-service-Marketplace-Management.svg"
+				},
+				{
+					"id": "azure-general-10116-icon-service-region-management",
+					"name": "Region Management",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10116-icon-service-Region-Management.svg"
+				},
+				{
+					"id": "azure-general-10341-icon-service-troubleshoot",
+					"name": "Troubleshoot",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10341-icon-service-Troubleshoot.svg"
+				},
+				{
+					"id": "azure-general-10349-icon-service-resource-explorer",
+					"name": "Resource Explorer",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10349-icon-service-Resource-Explorer.svg"
+				},
+				{
+					"id": "azure-general-10779-icon-service-biz-talk",
+					"name": "Biz Talk",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10779-icon-service-Biz-Talk.svg"
+				},
+				{
+					"id": "azure-general-10780-icon-service-blob-block",
+					"name": "Blob Block",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10780-icon-service-Blob-Block.svg"
+				},
+				{
+					"id": "azure-general-10781-icon-service-blob-page",
+					"name": "Blob Page",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10781-icon-service-Blob-Page.svg"
+				},
+				{
+					"id": "azure-general-10782-icon-service-branch",
+					"name": "Branch",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10782-icon-service-Branch.svg"
+				},
+				{
+					"id": "azure-general-10783-icon-service-browser",
+					"name": "Browser",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10783-icon-service-Browser.svg"
+				},
+				{
+					"id": "azure-general-10784-icon-service-bug",
+					"name": "Bug",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10784-icon-service-Bug.svg"
+				},
+				{
+					"id": "azure-general-10785-icon-service-builds",
+					"name": "Builds",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10785-icon-service-Builds.svg"
+				},
+				{
+					"id": "azure-general-10786-icon-service-cache",
+					"name": "Cache",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10786-icon-service-Cache.svg"
+				},
+				{
+					"id": "azure-general-10787-icon-service-code",
+					"name": "Code",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10787-icon-service-Code.svg"
+				},
+				{
+					"id": "azure-general-10788-icon-service-commit",
+					"name": "Commit",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10788-icon-service-Commit.svg"
+				},
+				{
+					"id": "azure-general-10789-icon-service-controls",
+					"name": "Controls",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10789-icon-service-Controls.svg"
+				},
+				{
+					"id": "azure-general-10790-icon-service-controls-horizontal",
+					"name": "Controls Horizontal",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10790-icon-service-Controls-Horizontal.svg"
+				},
+				{
+					"id": "azure-general-10791-icon-service-cost-alerts",
+					"name": "Cost Alerts",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10791-icon-service-Cost-Alerts.svg"
+				},
+				{
+					"id": "azure-general-10792-icon-service-cost-analysis",
+					"name": "Cost Analysis",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10792-icon-service-Cost-Analysis.svg"
+				},
+				{
+					"id": "azure-general-10793-icon-service-cost-budgets",
+					"name": "Cost Budgets",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10793-icon-service-Cost-Budgets.svg"
+				},
+				{
+					"id": "azure-general-10794-icon-service-counter",
+					"name": "Counter",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10794-icon-service-Counter.svg"
+				},
+				{
+					"id": "azure-general-10795-icon-service-cubes",
+					"name": "Cubes",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10795-icon-service-Cubes.svg"
+				},
+				{
+					"id": "azure-general-10796-icon-service-dev-console",
+					"name": "Dev Console",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10796-icon-service-Dev-Console.svg"
+				},
+				{
+					"id": "azure-general-10797-icon-service-download",
+					"name": "Download",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10797-icon-service-Download.svg"
+				},
+				{
+					"id": "azure-general-10798-icon-service-error",
+					"name": "Error",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10798-icon-service-Error.svg"
+				},
+				{
+					"id": "azure-general-10799-icon-service-extensions",
+					"name": "Extensions",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10799-icon-service-Extensions.svg"
+				},
+				{
+					"id": "azure-general-10800-icon-service-file",
+					"name": "File",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10800-icon-service-File.svg"
+				},
+				{
+					"id": "azure-general-10801-icon-service-files",
+					"name": "Files",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10801-icon-service-Files.svg"
+				},
+				{
+					"id": "azure-general-10802-icon-service-folder-blank",
+					"name": "Folder Blank",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10802-icon-service-Folder-Blank.svg"
+				},
+				{
+					"id": "azure-general-10803-icon-service-folder-website",
+					"name": "Folder Website",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10803-icon-service-Folder-Website.svg"
+				},
+				{
+					"id": "azure-general-10804-icon-service-ftp",
+					"name": "Ftp",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10804-icon-service-FTP.svg"
+				},
+				{
+					"id": "azure-general-10805-icon-service-gear",
+					"name": "Gear",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10805-icon-service-Gear.svg"
+				},
+				{
+					"id": "azure-general-10807-icon-service-globe-error",
+					"name": "Globe Error",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10807-icon-service-Globe-Error.svg"
+				},
+				{
+					"id": "azure-general-10808-icon-service-globe-success",
+					"name": "Globe Success",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10808-icon-service-Globe-Success.svg"
+				},
+				{
+					"id": "azure-general-10809-icon-service-globe-warning",
+					"name": "Globe Warning",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10809-icon-service-Globe-Warning.svg"
+				},
+				{
+					"id": "azure-general-10810-icon-service-guide",
+					"name": "Guide",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10810-icon-service-Guide.svg"
+				},
+				{
+					"id": "azure-general-10811-icon-service-heart",
+					"name": "Heart",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10811-icon-service-Heart.svg"
+				},
+				{
+					"id": "azure-general-10812-icon-service-image",
+					"name": "Image",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10812-icon-service-Image.svg"
+				},
+				{
+					"id": "azure-general-10813-icon-service-input-output",
+					"name": "Input Output",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10813-icon-service-Input-Output.svg"
+				},
+				{
+					"id": "azure-general-10814-icon-service-journey-hub",
+					"name": "Journey Hub",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10814-icon-service-Journey-Hub.svg"
+				},
+				{
+					"id": "azure-general-10815-icon-service-launch-portal",
+					"name": "Launch Portal",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10815-icon-service-Launch-Portal.svg"
+				},
+				{
+					"id": "azure-general-10816-icon-service-learn",
+					"name": "Learn",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10816-icon-service-Learn.svg"
+				},
+				{
+					"id": "azure-general-10817-icon-service-load-test",
+					"name": "Load Test",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10817-icon-service-Load-Test.svg"
+				},
+				{
+					"id": "azure-general-10818-icon-service-location",
+					"name": "Location",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10818-icon-service-Location.svg"
+				},
+				{
+					"id": "azure-general-10819-icon-service-log-streaming",
+					"name": "Log Streaming",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10819-icon-service-Log-Streaming.svg"
+				},
+				{
+					"id": "azure-general-10820-icon-service-management-portal",
+					"name": "Management Portal",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10820-icon-service-Management-Portal.svg"
+				},
+				{
+					"id": "azure-general-10821-icon-service-media-file",
+					"name": "Media File",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10821-icon-service-Media-File.svg"
+				},
+				{
+					"id": "azure-general-10822-icon-service-mobile",
+					"name": "Mobile",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10822-icon-service-Mobile.svg"
+				},
+				{
+					"id": "azure-general-10823-icon-service-mobile-engagement",
+					"name": "Mobile Engagement",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10823-icon-service-Mobile-Engagement.svg"
+				},
+				{
+					"id": "azure-general-10824-icon-service-power",
+					"name": "Power",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10824-icon-service-Power.svg"
+				},
+				{
+					"id": "azure-general-10825-icon-service-powershell",
+					"name": "Powershell",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10825-icon-service-Powershell.svg"
+				},
+				{
+					"id": "azure-general-10826-icon-service-power-up",
+					"name": "Power Up",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10826-icon-service-Power-Up.svg"
+				},
+				{
+					"id": "azure-general-10827-icon-service-feature-previews",
+					"name": "Feature Previews",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10827-icon-service-Feature-Previews.svg"
+				},
+				{
+					"id": "azure-general-10828-icon-service-process-explorer",
+					"name": "Process Explorer",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10828-icon-service-Process-Explorer.svg"
+				},
+				{
+					"id": "azure-general-10829-icon-service-production-ready-database",
+					"name": "Production Ready Database",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10829-icon-service-Production-Ready-Database.svg"
+				},
+				{
+					"id": "azure-general-10830-icon-service-resource-group-list",
+					"name": "Resource Group List",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10830-icon-service-Resource-Group-List.svg"
+				},
+				{
+					"id": "azure-general-10831-icon-service-resource-linked",
+					"name": "Resource Linked",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10831-icon-service-Resource-Linked.svg"
+				},
+				{
+					"id": "azure-general-10833-icon-service-scheduler",
+					"name": "Scheduler",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10833-icon-service-Scheduler.svg"
+				},
+				{
+					"id": "azure-general-10834-icon-service-search",
+					"name": "Search",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10834-icon-service-Search.svg"
+				},
+				{
+					"id": "azure-general-10835-icon-service-server-farm",
+					"name": "Server Farm",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10835-icon-service-Server-Farm.svg"
+				},
+				{
+					"id": "azure-general-10837-icon-service-ssd",
+					"name": "Ssd",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10837-icon-service-SSD.svg"
+				},
+				{
+					"id": "azure-general-10838-icon-service-storage-azure-files",
+					"name": "Storage Azure Files",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10838-icon-service-Storage-Azure-Files.svg"
+				},
+				{
+					"id": "azure-general-10839-icon-service-storage-container",
+					"name": "Storage Container",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10839-icon-service-Storage-Container.svg"
+				},
+				{
+					"id": "azure-general-10840-icon-service-storage-queue",
+					"name": "Storage Queue",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10840-icon-service-Storage-Queue.svg"
+				},
+				{
+					"id": "azure-general-10841-icon-service-table",
+					"name": "Table",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10841-icon-service-Table.svg"
+				},
+				{
+					"id": "azure-general-10842-icon-service-tags",
+					"name": "Tags",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10842-icon-service-Tags.svg"
+				},
+				{
+					"id": "azure-general-10843-icon-service-tfs-vc-repository",
+					"name": "Tfs Vc Repository",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10843-icon-service-TFS-VC-Repository.svg"
+				},
+				{
+					"id": "azure-general-10844-icon-service-toolbox",
+					"name": "Toolbox",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10844-icon-service-Toolbox.svg"
+				},
+				{
+					"id": "azure-general-10845-icon-service-versions",
+					"name": "Versions",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10845-icon-service-Versions.svg"
+				},
+				{
+					"id": "azure-general-10847-icon-service-website-power",
+					"name": "Website Power",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10847-icon-service-Website-Power.svg"
+				},
+				{
+					"id": "azure-general-10848-icon-service-website-staging",
+					"name": "Website Staging",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10848-icon-service-Website-Staging.svg"
+				},
+				{
+					"id": "azure-general-10849-icon-service-web-slots",
+					"name": "Web Slots",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10849-icon-service-Web-Slots.svg"
+				},
+				{
+					"id": "azure-general-10850-icon-service-web-test",
+					"name": "Web Test",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10850-icon-service-Web-Test.svg"
+				},
+				{
+					"id": "azure-general-10851-icon-service-workbooks",
+					"name": "Workbooks",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10851-icon-service-Workbooks.svg"
+				},
+				{
+					"id": "azure-general-10852-icon-service-workflow",
+					"name": "Workflow",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10852-icon-service-Workflow.svg"
+				},
+				{
+					"id": "azure-general-10853-icon-service-backlog",
+					"name": "Backlog",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10853-icon-service-Backlog.svg"
+				},
+				{
+					"id": "azure-general-10854-icon-service-media",
+					"name": "Media",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10854-icon-service-Media.svg"
+				},
+				{
+					"id": "azure-general-10855-icon-service-module",
+					"name": "Module",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10855-icon-service-Module.svg"
+				},
+				{
+					"id": "azure-general-10856-icon-service-search-grid",
+					"name": "Search Grid",
+					"provider": "azure",
+					"category": "General",
+					"tags": [],
+					"svgPath": "general/10856-icon-service-Search-Grid.svg"
+				}
+			]
+		},
+		{
+			"name": "Hybrid + Multicloud",
+			"icons": [
+				{
+					"id": "azure-hybrid-multicloud-03248-icon-service-azure-operator-5g-core",
+					"name": "Azure Operator 5g Core",
+					"provider": "azure",
+					"category": "Hybrid + Multicloud",
+					"tags": [],
+					"svgPath": "hybrid + multicloud/03248-icon-service-Azure-Operator-5G-Core.svg"
+				},
+				{
+					"id": "azure-hybrid-multicloud-03324-icon-service-azure-operator-nexus",
+					"name": "Azure Operator Nexus",
+					"provider": "azure",
+					"category": "Hybrid + Multicloud",
+					"tags": [],
+					"svgPath": "hybrid + multicloud/03324-icon-service-Azure-Operator-Nexus.svg"
+				},
+				{
+					"id": "azure-hybrid-multicloud-03333-icon-service-azure-operator-insights",
+					"name": "Azure Operator Insights",
+					"provider": "azure",
+					"category": "Hybrid + Multicloud",
+					"tags": [],
+					"svgPath": "hybrid + multicloud/03333-icon-service-Azure-Operator-Insights.svg"
+				},
+				{
+					"id": "azure-hybrid-multicloud-03334-icon-service-azure-operator-service-manager",
+					"name": "Azure Operator Service Manager",
+					"provider": "azure",
+					"category": "Hybrid + Multicloud",
+					"tags": [],
+					"svgPath": "hybrid + multicloud/03334-icon-service-Azure-Operator-Service-Manager.svg"
+				},
+				{
+					"id": "azure-hybrid-multicloud-03347-icon-service-azure-programmable-connectivity",
+					"name": "Azure Programmable Connectivity",
+					"provider": "azure",
+					"category": "Hybrid + Multicloud",
+					"tags": [],
+					"svgPath": "hybrid + multicloud/03347-icon-service-Azure-Programmable-Connectivity.svg"
+				},
+				{
+					"id": "azure-hybrid-multicloud-03585-icon-service-azure-monitor-pipeline",
+					"name": "Azure Monitor Pipeline",
+					"provider": "azure",
+					"category": "Hybrid + Multicloud",
+					"tags": [],
+					"svgPath": "hybrid + multicloud/03585-icon-service-Azure-Monitor-Pipeline.svg"
+				}
+			]
+		},
+		{
+			"name": "Identity",
+			"icons": [
+				{
+					"id": "azure-identity-00321-icon-service-security",
+					"name": "Security",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/00321-icon-service-Security.svg"
+				},
+				{
+					"id": "azure-identity-00919-icon-service-administrative-units",
+					"name": "Administrative Units",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/00919-icon-service-Administrative-Units.svg"
+				},
+				{
+					"id": "azure-identity-01084-icon-service-verifiable-credentials",
+					"name": "Verifiable Credentials",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/01084-icon-service-Verifiable-Credentials.svg"
+				},
+				{
+					"id": "azure-identity-02251-icon-service-entra-privleged-identity-management",
+					"name": "Entra Privleged Identity Management",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/02251-icon-service-Entra-Privleged-Identity-Management.svg"
+				},
+				{
+					"id": "azure-identity-02386-icon-service-api-proxy",
+					"name": "API Proxy",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/02386-icon-service-API-Proxy.svg"
+				},
+				{
+					"id": "azure-identity-02679-icon-service-tenant-properties",
+					"name": "Tenant Properties",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/02679-icon-service-Tenant-Properties.svg"
+				},
+				{
+					"id": "azure-identity-02680-icon-service-entra-identity-custom-roles",
+					"name": "Entra Identity Custom Roles",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/02680-icon-service-Entra-Identity-Custom-Roles.svg"
+				},
+				{
+					"id": "azure-identity-02681-icon-service-entra-identity-licenses",
+					"name": "Entra Identity Licenses",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/02681-icon-service-Entra-Identity-Licenses.svg"
+				},
+				{
+					"id": "azure-identity-02854-icon-service-entra-connect",
+					"name": "Entra Connect",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/02854-icon-service-Entra-Connect.svg"
+				},
+				{
+					"id": "azure-identity-03143-icon-service-entra-verified-id",
+					"name": "Entra Verified Id",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/03143-icon-service-Entra-Verified-ID.svg"
+				},
+				{
+					"id": "azure-identity-03225-icon-service-verification-as-a-service",
+					"name": "Verification As A Service",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/03225-icon-service-Verification-As-A-Service.svg"
+				},
+				{
+					"id": "azure-identity-03256-icon-service-multi-factor-authentication",
+					"name": "Multi Factor Authentication",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/03256-icon-service-Multi-Factor-Authentication.svg"
+				},
+				{
+					"id": "azure-identity-03309-icon-service-entra-global-secure-access",
+					"name": "Entra Global Secure Access",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/03309-icon-service-Entra-Global-Secure-Access.svg"
+				},
+				{
+					"id": "azure-identity-03338-icon-service-external-identities",
+					"name": "External Identities",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/03338-icon-service-External-Identities.svg"
+				},
+				{
+					"id": "azure-identity-03382-icon-service-entra-private-access",
+					"name": "Entra Private Access",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/03382-icon-service-Entra-Private-Access.svg"
+				},
+				{
+					"id": "azure-identity-03383-icon-service-entra-internet-access",
+					"name": "Entra Internet Access",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/03383-icon-service-Entra-Internet-Access.svg"
+				},
+				{
+					"id": "azure-identity-03533-icon-service-entra-connect-sync",
+					"name": "Entra Connect Sync",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/03533-icon-service-Entra-Connect-Sync.svg"
+				},
+				{
+					"id": "azure-identity-10222-icon-service-entra-domain-services",
+					"name": "Entra Domain Services",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/10222-icon-service-Entra-Domain-Services.svg"
+				},
+				{
+					"id": "azure-identity-10223-icon-service-groups",
+					"name": "Groups",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/10223-icon-service-Groups.svg"
+				},
+				{
+					"id": "azure-identity-10224-icon-service-active-directory-connect-health",
+					"name": "Active Directory Connect Health",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/10224-icon-service-Active-Directory-Connect-Health.svg"
+				},
+				{
+					"id": "azure-identity-10224-icon-service-entra-connect-health",
+					"name": "Entra Connect Health",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/10224-icon-service-Entra-Connect-Health.svg"
+				},
+				{
+					"id": "azure-identity-10225-icon-service-enterprise-applications",
+					"name": "Enterprise Applications",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/10225-icon-service-Enterprise-Applications.svg"
+				},
+				{
+					"id": "azure-identity-10227-icon-service-entra-managed-identities",
+					"name": "Entra Managed Identities",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/10227-icon-service-Entra-Managed-Identities.svg"
+				},
+				{
+					"id": "azure-identity-10227-icon-service-managed-identities",
+					"name": "Managed Identities",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/10227-icon-service-Managed-Identities.svg"
+				},
+				{
+					"id": "azure-identity-10228-icon-service-azure-ad-b2c",
+					"name": "Azure Ad B2c",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/10228-icon-service-Azure-AD-B2C.svg"
+				},
+				{
+					"id": "azure-identity-10229-icon-service-azure-information-protection",
+					"name": "Azure Information Protection",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/10229-icon-service-Azure-Information-Protection.svg"
+				},
+				{
+					"id": "azure-identity-10230-icon-service-users",
+					"name": "Users",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/10230-icon-service-Users.svg"
+				},
+				{
+					"id": "azure-identity-10231-icon-service-entra-id-protection",
+					"name": "Entra Id Protection",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/10231-icon-service-Entra-ID-Protection.svg"
+				},
+				{
+					"id": "azure-identity-10232-icon-service-app-registrations",
+					"name": "App Registrations",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/10232-icon-service-App-Registrations.svg"
+				},
+				{
+					"id": "azure-identity-10235-icon-service-identity-governance",
+					"name": "Identity Governance",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/10235-icon-service-Identity-Governance.svg"
+				},
+				{
+					"id": "azure-identity-10340-icon-service-entra-identity-roles-and-administrators",
+					"name": "Entra Identity Roles And Administrators",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/10340-icon-service-Entra-Identity-Roles-and-Administrators.svg"
+				},
+				{
+					"id": "azure-identity-10433-icon-service-user-settings",
+					"name": "User Settings",
+					"provider": "azure",
+					"category": "Identity",
+					"tags": [],
+					"svgPath": "identity/10433-icon-service-User-Settings.svg"
+				}
+			]
+		},
+		{
+			"name": "Integration",
+			"icons": [
+				{
+					"id": "azure-integration-00036-icon-service-sql-data-warehouses",
+					"name": "SQL Data Warehouses",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/00036-icon-service-SQL-Data-Warehouses.svg"
+				},
+				{
+					"id": "azure-integration-00555-icon-service-integration-service-environments",
+					"name": "Integration Service Environments",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/00555-icon-service-Integration-Service-Environments.svg"
+				},
+				{
+					"id": "azure-integration-00691-icon-service-azure-databox-gateway",
+					"name": "Azure Databox Gateway",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/00691-icon-service-Azure-Databox-Gateway.svg"
+				},
+				{
+					"id": "azure-integration-02072-icon-service-partner-topic",
+					"name": "Partner Topic",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/02072-icon-service-Partner-Topic.svg"
+				},
+				{
+					"id": "azure-integration-02073-icon-service-system-topic",
+					"name": "System Topic",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/02073-icon-service-System-Topic.svg"
+				},
+				{
+					"id": "azure-integration-02265-icon-service-partner-registration",
+					"name": "Partner Registration",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/02265-icon-service-Partner-Registration.svg"
+				},
+				{
+					"id": "azure-integration-02266-icon-service-partner-namespace",
+					"name": "Partner Namespace",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/02266-icon-service-Partner-Namespace.svg"
+				},
+				{
+					"id": "azure-integration-02631-icon-service-logic-apps",
+					"name": "Logic Apps",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/02631-icon-service-Logic-Apps.svg"
+				},
+				{
+					"id": "azure-integration-03335-icon-service-power-platform",
+					"name": "Power Platform",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/03335-icon-service-Power-Platform.svg"
+				},
+				{
+					"id": "azure-integration-03345-icon-service-integration-environments",
+					"name": "Integration Environments",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/03345-icon-service-Integration-Environments.svg"
+				},
+				{
+					"id": "azure-integration-03637-icon-service-business-process-tracking",
+					"name": "Business Process Tracking",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/03637-icon-service-Business-Process-Tracking.svg"
+				},
+				{
+					"id": "azure-integration-10042-icon-service-api-management-services",
+					"name": "API Management Services",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10042-icon-service-API-Management-Services.svg"
+				},
+				{
+					"id": "azure-integration-10048-icon-service-api-connections",
+					"name": "API Connections",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10048-icon-service-API-Connections.svg"
+				},
+				{
+					"id": "azure-integration-10089-icon-service-storsimple-device-managers",
+					"name": "Storsimple Device Managers",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10089-icon-service-StorSimple-Device-Managers.svg"
+				},
+				{
+					"id": "azure-integration-10095-icon-service-azure-stack-edge",
+					"name": "Azure Stack Edge",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10095-icon-service-Azure-Stack-Edge.svg"
+				},
+				{
+					"id": "azure-integration-10126-icon-service-data-factories",
+					"name": "Data Factories",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10126-icon-service-Data-Factories.svg"
+				},
+				{
+					"id": "azure-integration-10137-icon-service-azure-sql-server-stretch-databases",
+					"name": "Azure SQL Server Stretch Databases",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10137-icon-service-Azure-SQL-Server-Stretch-Databases.svg"
+				},
+				{
+					"id": "azure-integration-10206-icon-service-event-grid-topics",
+					"name": "Event Grid Topics",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10206-icon-service-Event-Grid-Topics.svg"
+				},
+				{
+					"id": "azure-integration-10209-icon-service-relays",
+					"name": "Relays",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10209-icon-service-Relays.svg"
+				},
+				{
+					"id": "azure-integration-10212-icon-service-azure-api-for-fhir",
+					"name": "Azure API For Fhir",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10212-icon-service-Azure-API-for-FHIR.svg"
+				},
+				{
+					"id": "azure-integration-10213-icon-service-software-as-a-service",
+					"name": "Software As A Service",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10213-icon-service-Software-as-a-Service.svg"
+				},
+				{
+					"id": "azure-integration-10215-icon-service-event-grid-domains",
+					"name": "Event Grid Domains",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10215-icon-service-Event-Grid-Domains.svg"
+				},
+				{
+					"id": "azure-integration-10216-icon-service-azure-data-catalog",
+					"name": "Azure Data Catalog",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10216-icon-service-Azure-Data-Catalog.svg"
+				},
+				{
+					"id": "azure-integration-10218-icon-service-integration-accounts",
+					"name": "Integration Accounts",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10218-icon-service-Integration-Accounts.svg"
+				},
+				{
+					"id": "azure-integration-10219-icon-service-app-configuration",
+					"name": "App Configuration",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10219-icon-service-App-Configuration.svg"
+				},
+				{
+					"id": "azure-integration-10220-icon-service-sendgrid-accounts",
+					"name": "Sendgrid Accounts",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10220-icon-service-SendGrid-Accounts.svg"
+				},
+				{
+					"id": "azure-integration-10221-icon-service-event-grid-subscriptions",
+					"name": "Event Grid Subscriptions",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10221-icon-service-Event-Grid-Subscriptions.svg"
+				},
+				{
+					"id": "azure-integration-10363-icon-service-logic-apps-custom-connector",
+					"name": "Logic Apps Custom Connector",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10363-icon-service-Logic-Apps-Custom-Connector.svg"
+				},
+				{
+					"id": "azure-integration-10836-icon-service-azure-service-bus",
+					"name": "Azure Service Bus",
+					"provider": "azure",
+					"category": "Integration",
+					"tags": [],
+					"svgPath": "integration/10836-icon-service-Azure-Service-Bus.svg"
+				}
+			]
+		},
+		{
+			"name": "Intune",
+			"icons": [
+				{
+					"id": "azure-intune-00399-icon-service-device-security-apple",
+					"name": "Device Security Apple",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/00399-icon-service-Device-Security-Apple.svg"
+				},
+				{
+					"id": "azure-intune-00399-icon-service-device-security-google",
+					"name": "Device Security Google",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/00399-icon-service-Device-Security-Google.svg"
+				},
+				{
+					"id": "azure-intune-00399-icon-service-device-security-windows",
+					"name": "Device Security Windows",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/00399-icon-service-Device-Security-Windows.svg"
+				},
+				{
+					"id": "azure-intune-10329-icon-service-intune",
+					"name": "Intune",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/10329-icon-service-Intune.svg"
+				},
+				{
+					"id": "azure-intune-10330-icon-service-ebooks",
+					"name": "Ebooks",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/10330-icon-service-eBooks.svg"
+				},
+				{
+					"id": "azure-intune-10331-icon-service-client-apps",
+					"name": "Client Apps",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/10331-icon-service-Client-Apps.svg"
+				},
+				{
+					"id": "azure-intune-10332-icon-service-devices",
+					"name": "Devices",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/10332-icon-service-Devices.svg"
+				},
+				{
+					"id": "azure-intune-10333-icon-service-device-compliance",
+					"name": "Device Compliance",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/10333-icon-service-Device-Compliance.svg"
+				},
+				{
+					"id": "azure-intune-10335-icon-service-software-updates",
+					"name": "Software Updates",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/10335-icon-service-Software-Updates.svg"
+				},
+				{
+					"id": "azure-intune-10336-icon-service-security-baselines",
+					"name": "Security Baselines",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/10336-icon-service-Security-Baselines.svg"
+				},
+				{
+					"id": "azure-intune-10337-icon-service-device-enrollment",
+					"name": "Device Enrollment",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/10337-icon-service-Device-Enrollment.svg"
+				},
+				{
+					"id": "azure-intune-10338-icon-service-device-configuration",
+					"name": "Device Configuration",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/10338-icon-service-Device-Configuration.svg"
+				},
+				{
+					"id": "azure-intune-10339-icon-service-exchange-access",
+					"name": "Exchange Access",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/10339-icon-service-Exchange-Access.svg"
+				},
+				{
+					"id": "azure-intune-10340-icon-service-entra-identity-roles-and-administrators",
+					"name": "Entra Identity Roles And Administrators",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/10340-icon-service-Entra-Identity-Roles-and-Administrators.svg"
+				},
+				{
+					"id": "azure-intune-10342-icon-service-tenant-status",
+					"name": "Tenant Status",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/10342-icon-service-Tenant-Status.svg"
+				},
+				{
+					"id": "azure-intune-10343-icon-service-intune-for-education",
+					"name": "Intune For Education",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/10343-icon-service-Intune-For-Education.svg"
+				},
+				{
+					"id": "azure-intune-10344-icon-service-intune-app-protection",
+					"name": "Intune App Protection",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/10344-icon-service-Intune-App-Protection.svg"
+				},
+				{
+					"id": "azure-intune-10350-icon-service-mindaro",
+					"name": "Mindaro",
+					"provider": "azure",
+					"category": "Intune",
+					"tags": [],
+					"svgPath": "intune/10350-icon-service-Mindaro.svg"
+				}
+			]
+		},
+		{
+			"name": "Iot",
+			"icons": [
+				{
+					"id": "azure-iot-00030-icon-service-machine-learning-studio-(classic)-web-services",
+					"name": "Machine Learning Studio (classic) Web Services",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/00030-icon-service-Machine-Learning-Studio-(Classic)-Web-Services.svg"
+				},
+				{
+					"id": "azure-iot-00039-icon-service-event-hubs",
+					"name": "Event Hubs",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/00039-icon-service-Event-Hubs.svg"
+				},
+				{
+					"id": "azure-iot-00042-icon-service-stream-analytics-jobs",
+					"name": "Stream Analytics Jobs",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/00042-icon-service-Stream-Analytics-Jobs.svg"
+				},
+				{
+					"id": "azure-iot-00691-icon-service-azure-databox-gateway",
+					"name": "Azure Databox Gateway",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/00691-icon-service-Azure-Databox-Gateway.svg"
+				},
+				{
+					"id": "azure-iot-01030-icon-service-digital-twins",
+					"name": "Digital Twins",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/01030-icon-service-Digital-Twins.svg"
+				},
+				{
+					"id": "azure-iot-02359-icon-service-industrial-iot",
+					"name": "Industrial IOT",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/02359-icon-service-Industrial-IoT.svg"
+				},
+				{
+					"id": "azure-iot-02631-icon-service-logic-apps",
+					"name": "Logic Apps",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/02631-icon-service-Logic-Apps.svg"
+				},
+				{
+					"id": "azure-iot-03293-icon-service-azure-stack-hci-sizer",
+					"name": "Azure Stack Hci Sizer",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/03293-icon-service-Azure-Stack-HCI-Sizer.svg"
+				},
+				{
+					"id": "azure-iot-03466-icon-service-stack-hci-premium",
+					"name": "Stack Hci Premium",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/03466-icon-service-Stack-HCI-Premium.svg"
+				},
+				{
+					"id": "azure-iot-03485-icon-service-azure-iot-operations",
+					"name": "Azure IOT Operations",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/03485-icon-service-Azure-IoT-Operations.svg"
+				},
+				{
+					"id": "azure-iot-10029-icon-service-function-apps",
+					"name": "Function Apps",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10029-icon-service-Function-Apps.svg"
+				},
+				{
+					"id": "azure-iot-10045-icon-service-notification-hubs",
+					"name": "Notification Hubs",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10045-icon-service-Notification-Hubs.svg"
+				},
+				{
+					"id": "azure-iot-10053-icon-service-notification-hub-namespaces",
+					"name": "Notification Hub Namespaces",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10053-icon-service-Notification-Hub-Namespaces.svg"
+				},
+				{
+					"id": "azure-iot-10114-icon-service-azure-stack",
+					"name": "Azure Stack",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10114-icon-service-Azure-Stack.svg"
+				},
+				{
+					"id": "azure-iot-10121-icon-service-azure-cosmos-db",
+					"name": "Azure Cosmos DB",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10121-icon-service-Azure-Cosmos-DB.svg"
+				},
+				{
+					"id": "azure-iot-10149-icon-service-event-hub-clusters",
+					"name": "Event Hub Clusters",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10149-icon-service-Event-Hub-Clusters.svg"
+				},
+				{
+					"id": "azure-iot-10167-icon-service-machine-learning-studio-workspaces",
+					"name": "Machine Learning Studio Workspaces",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10167-icon-service-Machine-Learning-Studio-Workspaces.svg"
+				},
+				{
+					"id": "azure-iot-10168-icon-service-machine-learning-studio-web-service-plans",
+					"name": "Machine Learning Studio Web Service Plans",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10168-icon-service-Machine-Learning-Studio-Web-Service-Plans.svg"
+				},
+				{
+					"id": "azure-iot-10181-icon-service-time-series-insights-environments",
+					"name": "Time Series Insights Environments",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10181-icon-service-Time-Series-Insights-Environments.svg"
+				},
+				{
+					"id": "azure-iot-10182-icon-service-iot-hub",
+					"name": "IOT Hub",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10182-icon-service-IoT-Hub.svg"
+				},
+				{
+					"id": "azure-iot-10184-icon-service-iot-central-applications",
+					"name": "IOT Central Applications",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10184-icon-service-IoT-Central-Applications.svg"
+				},
+				{
+					"id": "azure-iot-10185-icon-service-azure-maps-accounts",
+					"name": "Azure Maps Accounts",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10185-icon-service-Azure-Maps-Accounts.svg"
+				},
+				{
+					"id": "azure-iot-10186-icon-service-iot-edge",
+					"name": "IOT Edge",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10186-icon-service-IoT-Edge.svg"
+				},
+				{
+					"id": "azure-iot-10188-icon-service-time-series-insights-event-sources",
+					"name": "Time Series Insights Event Sources",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10188-icon-service-Time-Series-Insights-Event-Sources.svg"
+				},
+				{
+					"id": "azure-iot-10192-icon-service-time-series-insights-access-policies",
+					"name": "Time Series Insights Access Policies",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10192-icon-service-Time-Series-Insights-Access-Policies.svg"
+				},
+				{
+					"id": "azure-iot-10198-icon-service-time-series-data-sets",
+					"name": "Time Series Data Sets",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10198-icon-service-Time-Series-Data-Sets.svg"
+				},
+				{
+					"id": "azure-iot-10203-icon-service-windows10-core-services",
+					"name": "Windows10 Core Services",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10203-icon-service-Windows10-Core-Services.svg"
+				},
+				{
+					"id": "azure-iot-10221-icon-service-event-grid-subscriptions",
+					"name": "Event Grid Subscriptions",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10221-icon-service-Event-Grid-Subscriptions.svg"
+				},
+				{
+					"id": "azure-iot-10369-icon-service-device-provisioning-services",
+					"name": "Device Provisioning Services",
+					"provider": "azure",
+					"category": "Iot",
+					"tags": [],
+					"svgPath": "iot/10369-icon-service-Device-Provisioning-Services.svg"
+				}
+			]
+		},
+		{
+			"name": "Management + Governance",
+			"icons": [
+				{
+					"id": "azure-management-governance-00001-icon-service-monitor",
+					"name": "Monitor",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00001-icon-service-Monitor.svg"
+				},
+				{
+					"id": "azure-management-governance-00002-icon-service-alerts",
+					"name": "Alerts",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00002-icon-service-Alerts.svg"
+				},
+				{
+					"id": "azure-management-governance-00003-icon-service-advisor",
+					"name": "Advisor",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00003-icon-service-Advisor.svg"
+				},
+				{
+					"id": "azure-management-governance-00004-icon-service-cost-management-and-billing",
+					"name": "Cost Management And Billing",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00004-icon-service-Cost-Management-and-Billing.svg"
+				},
+				{
+					"id": "azure-management-governance-00006-icon-service-blueprints",
+					"name": "Blueprints",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00006-icon-service-Blueprints.svg"
+				},
+				{
+					"id": "azure-management-governance-00007-icon-service-activity-log",
+					"name": "Activity Log",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00007-icon-service-Activity-Log.svg"
+				},
+				{
+					"id": "azure-management-governance-00008-icon-service-diagnostics-settings",
+					"name": "Diagnostics Settings",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00008-icon-service-Diagnostics-Settings.svg"
+				},
+				{
+					"id": "azure-management-governance-00009-icon-service-log-analytics-workspaces",
+					"name": "Log Analytics Workspaces",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00009-icon-service-Log-Analytics-Workspaces.svg"
+				},
+				{
+					"id": "azure-management-governance-00010-icon-service-scheduler-job-collections",
+					"name": "Scheduler Job Collections",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00010-icon-service-Scheduler-Job-Collections.svg"
+				},
+				{
+					"id": "azure-management-governance-00011-icon-service-compliance",
+					"name": "Compliance",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00011-icon-service-Compliance.svg"
+				},
+				{
+					"id": "azure-management-governance-00012-icon-service-application-insights",
+					"name": "Application Insights",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00012-icon-service-Application-Insights.svg"
+				},
+				{
+					"id": "azure-management-governance-00014-icon-service-my-customers",
+					"name": "My Customers",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00014-icon-service-My-Customers.svg"
+				},
+				{
+					"id": "azure-management-governance-00017-icon-service-recovery-services-vaults",
+					"name": "Recovery Services Vaults",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00017-icon-service-Recovery-Services-Vaults.svg"
+				},
+				{
+					"id": "azure-management-governance-00020-icon-service-metrics",
+					"name": "Metrics",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00020-icon-service-Metrics.svg"
+				},
+				{
+					"id": "azure-management-governance-00021-icon-service-solutions",
+					"name": "Solutions",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00021-icon-service-Solutions.svg"
+				},
+				{
+					"id": "azure-management-governance-00022-icon-service-automation-accounts",
+					"name": "Automation Accounts",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00022-icon-service-Automation-Accounts.svg"
+				},
+				{
+					"id": "azure-management-governance-00024-icon-service-operation-log-(classic)",
+					"name": "Operation Log (classic)",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00024-icon-service-Operation-Log-(Classic).svg"
+				},
+				{
+					"id": "azure-management-governance-00025-icon-service-service-providers",
+					"name": "Service Providers",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00025-icon-service-Service-Providers.svg"
+				},
+				{
+					"id": "azure-management-governance-00026-icon-service-education",
+					"name": "Education",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00026-icon-service-Education.svg"
+				},
+				{
+					"id": "azure-management-governance-00027-icon-service-service-catalog-mad",
+					"name": "Service Catalog Mad",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00027-icon-service-Service-Catalog-MAD.svg"
+				},
+				{
+					"id": "azure-management-governance-00408-icon-service-intune-trends",
+					"name": "Intune Trends",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00408-icon-service-Intune-Trends.svg"
+				},
+				{
+					"id": "azure-management-governance-00471-icon-service-azure-lighthouse",
+					"name": "Azure Lighthouse",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00471-icon-service-Azure-Lighthouse.svg"
+				},
+				{
+					"id": "azure-management-governance-00571-icon-service-universal-print",
+					"name": "Universal Print",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00571-icon-service-Universal-Print.svg"
+				},
+				{
+					"id": "azure-management-governance-00756-icon-service-azure-arc",
+					"name": "Azure Arc",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/00756-icon-service-Azure-Arc.svg"
+				},
+				{
+					"id": "azure-management-governance-01710-icon-service-arc-machines",
+					"name": "Arc Machines",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/01710-icon-service-Arc-Machines.svg"
+				},
+				{
+					"id": "azure-management-governance-03366-icon-service-resources-provider",
+					"name": "Resources Provider",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/03366-icon-service-Resources-Provider.svg"
+				},
+				{
+					"id": "azure-management-governance-10303-icon-service-user-privacy",
+					"name": "User Privacy",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/10303-icon-service-User-Privacy.svg"
+				},
+				{
+					"id": "azure-management-governance-10311-icon-service-managed-desktop",
+					"name": "Managed Desktop",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/10311-icon-service-Managed-Desktop.svg"
+				},
+				{
+					"id": "azure-management-governance-10313-icon-service-managed-applications-center",
+					"name": "Managed Applications Center",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/10313-icon-service-Managed-Applications-Center.svg"
+				},
+				{
+					"id": "azure-management-governance-10314-icon-service-customer-lockbox-for-microsoft-azure",
+					"name": "Customer Lockbox For Microsoft Azure",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/10314-icon-service-Customer-Lockbox-for-Microsoft-Azure.svg"
+				},
+				{
+					"id": "azure-management-governance-10316-icon-service-policy",
+					"name": "Policy",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/10316-icon-service-Policy.svg"
+				},
+				{
+					"id": "azure-management-governance-10318-icon-service-resource-graph-explorer",
+					"name": "Resource Graph Explorer",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/10318-icon-service-Resource-Graph-Explorer.svg"
+				},
+				{
+					"id": "azure-management-governance-10450-icon-service-machinesazurearc",
+					"name": "Machinesazurearc",
+					"provider": "azure",
+					"category": "Management + Governance",
+					"tags": [],
+					"svgPath": "management + governance/10450-icon-service-MachinesAzureArc.svg"
+				}
+			]
+		},
+		{
+			"name": "Menu",
+			"icons": [
+				{
+					"id": "azure-menu-00787-icon-service-keys",
+					"name": "Keys",
+					"provider": "azure",
+					"category": "Menu",
+					"tags": [],
+					"svgPath": "menu/00787-icon-service-Keys.svg"
+				}
+			]
+		},
+		{
+			"name": "Migrate",
+			"icons": [
+				{
+					"id": "azure-migrate-00004-icon-service-cost-management-and-billing",
+					"name": "Cost Management And Billing",
+					"provider": "azure",
+					"category": "Migrate",
+					"tags": [],
+					"svgPath": "migrate/00004-icon-service-Cost-Management-and-Billing.svg"
+				},
+				{
+					"id": "azure-migrate-00017-icon-service-recovery-services-vaults",
+					"name": "Recovery Services Vaults",
+					"provider": "azure",
+					"category": "Migrate",
+					"tags": [],
+					"svgPath": "migrate/00017-icon-service-Recovery-Services-Vaults.svg"
+				},
+				{
+					"id": "azure-migrate-00691-icon-service-azure-databox-gateway",
+					"name": "Azure Databox Gateway",
+					"provider": "azure",
+					"category": "Migrate",
+					"tags": [],
+					"svgPath": "migrate/00691-icon-service-Azure-Databox-Gateway.svg"
+				},
+				{
+					"id": "azure-migrate-10094-icon-service-data-box",
+					"name": "Data Box",
+					"provider": "azure",
+					"category": "Migrate",
+					"tags": [],
+					"svgPath": "migrate/10094-icon-service-Data-Box.svg"
+				},
+				{
+					"id": "azure-migrate-10095-icon-service-azure-stack-edge",
+					"name": "Azure Stack Edge",
+					"provider": "azure",
+					"category": "Migrate",
+					"tags": [],
+					"svgPath": "migrate/10095-icon-service-Azure-Stack-Edge.svg"
+				},
+				{
+					"id": "azure-migrate-10281-icon-service-azure-migrate",
+					"name": "Azure Migrate",
+					"provider": "azure",
+					"category": "Migrate",
+					"tags": [],
+					"svgPath": "migrate/10281-icon-service-Azure-Migrate.svg"
+				}
+			]
+		},
+		{
+			"name": "Migration",
+			"icons": [
+				{
+					"id": "azure-migration-10133-icon-service-azure-database-migration-services",
+					"name": "Azure Database Migration Services",
+					"provider": "azure",
+					"category": "Migration",
+					"tags": [],
+					"svgPath": "migration/10133-icon-service-Azure-Database-Migration-Services.svg"
+				}
+			]
+		},
+		{
+			"name": "Mixed Reality",
+			"icons": [
+				{
+					"id": "azure-mixed-reality-00698-icon-service-remote-rendering",
+					"name": "Remote Rendering",
+					"provider": "azure",
+					"category": "Mixed Reality",
+					"tags": [],
+					"svgPath": "mixed reality/00698-icon-service-Remote-Rendering.svg"
+				},
+				{
+					"id": "azure-mixed-reality-10352-icon-service-spatial-anchor-accounts",
+					"name": "Spatial Anchor Accounts",
+					"provider": "azure",
+					"category": "Mixed Reality",
+					"tags": [],
+					"svgPath": "mixed reality/10352-icon-service-Spatial-Anchor-Accounts.svg"
+				}
+			]
+		},
+		{
+			"name": "Mobile",
+			"icons": [
+				{
+					"id": "azure-mobile-03335-icon-service-power-platform",
+					"name": "Power Platform",
+					"provider": "azure",
+					"category": "Mobile",
+					"tags": [],
+					"svgPath": "mobile/03335-icon-service-Power-Platform.svg"
+				},
+				{
+					"id": "azure-mobile-10035-icon-service-app-services",
+					"name": "App Services",
+					"provider": "azure",
+					"category": "Mobile",
+					"tags": [],
+					"svgPath": "mobile/10035-icon-service-App-Services.svg"
+				},
+				{
+					"id": "azure-mobile-10045-icon-service-notification-hubs",
+					"name": "Notification Hubs",
+					"provider": "azure",
+					"category": "Mobile",
+					"tags": [],
+					"svgPath": "mobile/10045-icon-service-Notification-Hubs.svg"
+				}
+			]
+		},
+		{
+			"name": "Monitor",
+			"icons": [
+				{
+					"id": "azure-monitor-00001-icon-service-monitor",
+					"name": "Monitor",
+					"provider": "azure",
+					"category": "Monitor",
+					"tags": [],
+					"svgPath": "monitor/00001-icon-service-Monitor.svg"
+				},
+				{
+					"id": "azure-monitor-00007-icon-service-activity-log",
+					"name": "Activity Log",
+					"provider": "azure",
+					"category": "Monitor",
+					"tags": [],
+					"svgPath": "monitor/00007-icon-service-Activity-Log.svg"
+				},
+				{
+					"id": "azure-monitor-00008-icon-service-diagnostics-settings",
+					"name": "Diagnostics Settings",
+					"provider": "azure",
+					"category": "Monitor",
+					"tags": [],
+					"svgPath": "monitor/00008-icon-service-Diagnostics-Settings.svg"
+				},
+				{
+					"id": "azure-monitor-00009-icon-service-log-analytics-workspaces",
+					"name": "Log Analytics Workspaces",
+					"provider": "azure",
+					"category": "Monitor",
+					"tags": [],
+					"svgPath": "monitor/00009-icon-service-Log-Analytics-Workspaces.svg"
+				},
+				{
+					"id": "azure-monitor-00012-icon-service-application-insights",
+					"name": "Application Insights",
+					"provider": "azure",
+					"category": "Monitor",
+					"tags": [],
+					"svgPath": "monitor/00012-icon-service-Application-Insights.svg"
+				},
+				{
+					"id": "azure-monitor-00020-icon-service-metrics",
+					"name": "Metrics",
+					"provider": "azure",
+					"category": "Monitor",
+					"tags": [],
+					"svgPath": "monitor/00020-icon-service-Metrics.svg"
+				},
+				{
+					"id": "azure-monitor-00438-icon-service-azure-monitors-for-sap-solutions",
+					"name": "Azure Monitors For Sap Solutions",
+					"provider": "azure",
+					"category": "Monitor",
+					"tags": [],
+					"svgPath": "monitor/00438-icon-service-Azure-Monitors-for-SAP-Solutions.svg"
+				},
+				{
+					"id": "azure-monitor-00563-icon-service-change-analysis",
+					"name": "Change Analysis",
+					"provider": "azure",
+					"category": "Monitor",
+					"tags": [],
+					"svgPath": "monitor/00563-icon-service-Change-Analysis.svg"
+				},
+				{
+					"id": "azure-monitor-02189-icon-service-azure-workbooks",
+					"name": "Azure Workbooks",
+					"provider": "azure",
+					"category": "Monitor",
+					"tags": [],
+					"svgPath": "monitor/02189-icon-service-Azure-Workbooks.svg"
+				},
+				{
+					"id": "azure-monitor-10066-icon-service-network-watcher",
+					"name": "Network Watcher",
+					"provider": "azure",
+					"category": "Monitor",
+					"tags": [],
+					"svgPath": "monitor/10066-icon-service-Network-Watcher.svg"
+				},
+				{
+					"id": "azure-monitor-10832-icon-service-auto-scale",
+					"name": "Auto Scale",
+					"provider": "azure",
+					"category": "Monitor",
+					"tags": [],
+					"svgPath": "monitor/10832-icon-service-Auto-Scale.svg"
+				}
+			]
+		},
+		{
+			"name": "New Icons",
+			"icons": [
+				{
+					"id": "azure-new-icons-029029174-icon-service-load-balancer-hub",
+					"name": "Load Balancer Hub",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/029029174-icon-service-Load-Balancer-Hub.svg"
+				},
+				{
+					"id": "azure-new-icons-029109619-icon-service-toolchain-orchestrator",
+					"name": "Toolchain Orchestrator",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/029109619-icon-service-Toolchain-Orchestrator.svg"
+				},
+				{
+					"id": "azure-new-icons-029109619-icon-service-workload-orchestration",
+					"name": "Workload Orchestration",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/029109619-icon-service-Workload-Orchestration.svg"
+				},
+				{
+					"id": "azure-new-icons-029203566-icon-service-data-virtualization",
+					"name": "Data Virtualization",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/029203566-icon-service-Data-Virtualization.svg"
+				},
+				{
+					"id": "azure-new-icons-029273094-icon-service-edge-actions",
+					"name": "Edge Actions",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/029273094-icon-service-Edge-Actions.svg"
+				},
+				{
+					"id": "azure-new-icons-029455661-icon-service-frd-qa",
+					"name": "Frd Qa",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/029455661-icon-service-FRD-QA.svg"
+				},
+				{
+					"id": "azure-new-icons-029636048-icon-service-landing-zone",
+					"name": "Landing Zone",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/029636048-icon-service-Landing-Zone.svg"
+				},
+				{
+					"id": "azure-new-icons-029637767-icon-service-service-groups",
+					"name": "Service Groups",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/029637767-icon-service-Service-Groups.svg"
+				},
+				{
+					"id": "azure-new-icons-029797391-icon-service-engage-center-connect",
+					"name": "Engage Center Connect",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/029797391-icon-service-Engage-Center-Connect.svg"
+				},
+				{
+					"id": "azure-new-icons-02987-icon-service-pubsub",
+					"name": "Pubsub",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/02987-icon-service-pubsub.svg"
+				},
+				{
+					"id": "azure-new-icons-030486388-icon-service-storage-hubs",
+					"name": "Storage Hubs",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/030486388-icon-service-Storage-Hubs.svg"
+				},
+				{
+					"id": "azure-new-icons-030777508-icon-service-service-group-relationships",
+					"name": "030777508 Icon Service Service Group Relationships",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/030777508 -icon-service-Service-Group-Relationships.svg"
+				},
+				{
+					"id": "azure-new-icons-030868929-icon-service-stage-maps",
+					"name": "Stage Maps",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/030868929-icon-service-Stage-Maps.svg"
+				},
+				{
+					"id": "azure-new-icons-032130874-icon-service-logic-apps-template",
+					"name": "Logic Apps Template",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/032130874-icon-service-Logic-Apps-Template.svg"
+				},
+				{
+					"id": "azure-new-icons-032487601-icon-service-aks-network-policy",
+					"name": "AKS Network Policy",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/032487601-icon-service-AKS-Network-Policy.svg"
+				},
+				{
+					"id": "azure-new-icons-032869111-icon-service-microsoft-discovery",
+					"name": "Microsoft Discovery",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/032869111-icon-service-Microsoft-Discovery.svg"
+				},
+				{
+					"id": "azure-new-icons-033049334-icon-service-scheduled-actions",
+					"name": "Scheduled Actions",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/033049334-icon-service-Scheduled-Actions.svg"
+				},
+				{
+					"id": "azure-new-icons-033112809-icon-service-promethus",
+					"name": "Promethus",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/033112809-icon-service-promethus.svg"
+				},
+				{
+					"id": "azure-new-icons-033545113-icon-service-kubernetes-hub",
+					"name": "Kubernetes Hub",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/033545113-icon-service-Kubernetes-Hub.svg"
+				},
+				{
+					"id": "azure-new-icons-033745116-icon-service-azure-local",
+					"name": "Azure Local",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/033745116-icon-service-Azure-Local.svg"
+				},
+				{
+					"id": "azure-new-icons-033805167-icon-service-azure-app-testing",
+					"name": "Azure App Testing",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/033805167-icon-service-Azure-App-Testing.svg"
+				},
+				{
+					"id": "azure-new-icons-03401-icon-service-azure-container-storage",
+					"name": "Azure Container Storage",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/03401-icon-service-Azure-Container-Storage.svg"
+				},
+				{
+					"id": "azure-new-icons-03425-icon-service-external-id",
+					"name": "External Id",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/03425-icon-service-external-id.svg"
+				},
+				{
+					"id": "azure-new-icons-034251-icon-service-external-id-modified",
+					"name": "External Id Modified",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/034251-icon-service-external-id-modified.svg"
+				},
+				{
+					"id": "azure-new-icons-034412066-icon-service-vnet-appliance",
+					"name": "Vnet Appliance",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/034412066-icon-service-VNet-Appliance.svg"
+				},
+				{
+					"id": "azure-new-icons-034855501-icon-service-monitor-issues",
+					"name": "Monitor Issues",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/034855501-icon-service-Monitor-Issues.svg"
+				},
+				{
+					"id": "azure-new-icons-03495-icon-service-azure-consumption-commitment",
+					"name": "Azure Consumption Commitment",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/03495-icon-service-Azure-Consumption-Commitment.svg"
+				},
+				{
+					"id": "azure-new-icons-03521-icon-service-edge-storage-accelerator",
+					"name": "Edge Storage Accelerator",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/03521-icon-service-Edge-Storage-Accelerator.svg"
+				},
+				{
+					"id": "azure-new-icons-035572279-icon-service-operation-center",
+					"name": "Operation Center",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/035572279-icon-service-Operation-Center.svg"
+				},
+				{
+					"id": "azure-new-icons-03565-icon-service-sql-database-fleet-manager",
+					"name": "SQL Database Fleet Manager",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/03565-icon-service-SQL-Database-Fleet-Manager.svg"
+				},
+				{
+					"id": "azure-new-icons-03633-icon-service-breeze",
+					"name": "Breeze",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/03633-icon-service-Breeze.svg"
+				},
+				{
+					"id": "azure-new-icons-03643-icon-service-network-foundation-hub",
+					"name": "Network Foundation Hub",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/03643-icon-service-Network-Foundation-Hub.svg"
+				},
+				{
+					"id": "azure-new-icons-03645-icon-service-azure-linux",
+					"name": "Azure Linux",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/03645-icon-service-Azure-Linux.svg"
+				},
+				{
+					"id": "azure-new-icons-03650-icon-service-network-security-hub",
+					"name": "Network Security Hub",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/03650-icon-service-Network-Security-Hub.svg"
+				},
+				{
+					"id": "azure-new-icons-03656-icon-service-hybrid-connectivity-hub",
+					"name": "Hybrid Connectivity Hub",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/03656-icon-service-Hybrid-Connectivity-Hub.svg"
+				},
+				{
+					"id": "azure-new-icons-03675-icon-service-azure-managed-redis",
+					"name": "Azure Managed Redis",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/03675-icon-service-Azure-Managed-Redis.svg"
+				},
+				{
+					"id": "azure-new-icons-03687-icon-service-ai-at-edge",
+					"name": "Ai At Edge",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/03687-icon-service-AI-at-Edge.svg"
+				},
+				{
+					"id": "azure-new-icons-03694-icon-service-vpnclientwindows",
+					"name": "Vpnclientwindows",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/03694-icon-service-VPNClientWindows.svg"
+				},
+				{
+					"id": "azure-new-icons-03755-icon-service-planetary-computer-pro",
+					"name": "Planetary Computer Pro",
+					"provider": "azure",
+					"category": "New Icons",
+					"tags": [],
+					"svgPath": "new icons/03755-icon-service-Planetary-Computer-Pro.svg"
+				}
+			]
+		},
+		{
+			"name": "Other",
+			"icons": [
+				{
+					"id": "azure-other-00327-icon-service-azure-virtual-desktop",
+					"name": "Azure Virtual Desktop",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/00327-icon-service-Azure-Virtual-Desktop.svg"
+				},
+				{
+					"id": "azure-other-00412-icon-service-ssh-keys",
+					"name": "Ssh Keys",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/00412-icon-service-SSH-Keys.svg"
+				},
+				{
+					"id": "azure-other-00469-icon-service-internet-analyzer-profiles",
+					"name": "Internet Analyzer Profiles",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/00469-icon-service-Internet-Analyzer-Profiles.svg"
+				},
+				{
+					"id": "azure-other-00559-icon-service-azure-cloud-shell",
+					"name": "Azure Cloud Shell",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/00559-icon-service-Azure-Cloud-Shell.svg"
+				},
+				{
+					"id": "azure-other-00712-icon-service-video-analyzers",
+					"name": "Video Analyzers",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/00712-icon-service-Video-Analyzers.svg"
+				},
+				{
+					"id": "azure-other-00903-icon-service-expressroute-direct",
+					"name": "Expressroute Direct",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/00903-icon-service-ExpressRoute-Direct.svg"
+				},
+				{
+					"id": "azure-other-00913-icon-service-cost-export",
+					"name": "Cost Export",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/00913-icon-service-Cost-Export.svg"
+				},
+				{
+					"id": "azure-other-00968-icon-service-azure-communication-services",
+					"name": "Azure Communication Services",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/00968-icon-service-Azure-Communication-Services.svg"
+				},
+				{
+					"id": "azure-other-00970-icon-service-peering-service",
+					"name": "Peering Service",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/00970-icon-service-Peering-Service.svg"
+				},
+				{
+					"id": "azure-other-01001-icon-service-azure-network-function-manager-functions",
+					"name": "Azure Network Function Manager Functions",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/01001-icon-service-Azure-Network-Function-Manager-Functions.svg"
+				},
+				{
+					"id": "azure-other-01085-icon-service-log-analytics-query-pack",
+					"name": "Log Analytics Query Pack",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/01085-icon-service-Log-Analytics-Query-Pack.svg"
+				},
+				{
+					"id": "azure-other-01088-icon-service-arc-kubernetes",
+					"name": "Arc Kubernetes",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/01088-icon-service-Arc-Kubernetes.svg"
+				},
+				{
+					"id": "azure-other-01219-icon-service-azure-vmware-solution",
+					"name": "Azure Vmware Solution",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/01219-icon-service-Azure-VMware-Solution.svg"
+				},
+				{
+					"id": "azure-other-01285-icon-service-peerings",
+					"name": "Peerings",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/01285-icon-service-Peerings.svg"
+				},
+				{
+					"id": "azure-other-01757-icon-service-dashboard-hub",
+					"name": "Dashboard Hub",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/01757-icon-service-Dashboard-Hub.svg"
+				},
+				{
+					"id": "azure-other-01800-icon-service-azure-video-indexer",
+					"name": "Azure Video Indexer",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/01800-icon-service-Azure-Video-Indexer.svg"
+				},
+				{
+					"id": "azure-other-01846-icon-service-avs-vm",
+					"name": "Avs VM",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/01846-icon-service-AVS-VM.svg"
+				},
+				{
+					"id": "azure-other-01848-icon-service-arc-postgresql",
+					"name": "Arc Postgresql",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/01848-icon-service-Arc-PostgreSQL .svg"
+				},
+				{
+					"id": "azure-other-01849-icon-service-arc-sql-managed-instance",
+					"name": "Arc SQL Managed Instance",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/01849-icon-service-Arc-SQL-Managed-Instance.svg"
+				},
+				{
+					"id": "azure-other-01850-icon-service-arc-sql-server",
+					"name": "Arc SQL Server",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/01850-icon-service-Arc-SQL-Server.svg"
+				},
+				{
+					"id": "azure-other-01857-icon-service-data-collection-rules",
+					"name": "Data Collection Rules",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/01857-icon-service-Data-Collection-Rules.svg"
+				},
+				{
+					"id": "azure-other-02200-icon-service-resource-mover",
+					"name": "Resource Mover",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02200-icon-service-Resource-Mover.svg"
+				},
+				{
+					"id": "azure-other-02223-icon-service-azure-chaos-studio",
+					"name": "Azure Chaos Studio",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02223-icon-service-Azure-Chaos-Studio.svg"
+				},
+				{
+					"id": "azure-other-02237-icon-service-network-managers",
+					"name": "Network Managers",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02237-icon-service-Network-Managers.svg"
+				},
+				{
+					"id": "azure-other-02322-icon-service-dedicated-hsm",
+					"name": "Dedicated Hsm",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02322-icon-service-Dedicated-HSM.svg"
+				},
+				{
+					"id": "azure-other-02323-icon-service-modular-data-center",
+					"name": "Modular Data Center",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02323-icon-service-Modular-Data-Center.svg"
+				},
+				{
+					"id": "azure-other-02340-icon-service-template-specs",
+					"name": "Template Specs",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02340-icon-service-Template-Specs.svg"
+				},
+				{
+					"id": "azure-other-02356-icon-service-arc-data-services",
+					"name": "Arc Data Services",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02356-icon-service-Arc-Data-services.svg"
+				},
+				{
+					"id": "azure-other-02360-icon-service-azure-backup-center",
+					"name": "Azure Backup Center",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02360-icon-service-Azure-Backup-Center.svg"
+				},
+				{
+					"id": "azure-other-02361-icon-service-backup-vault",
+					"name": "Backup Vault",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02361-icon-service-Backup-Vault.svg"
+				},
+				{
+					"id": "azure-other-02475-icon-service-device-update-iot-hub",
+					"name": "Device Update IOT Hub",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02475-icon-service-Device-Update-IoT-Hub.svg"
+				},
+				{
+					"id": "azure-other-02486-icon-service-fiji",
+					"name": "Fiji",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02486-icon-service-Fiji.svg"
+				},
+				{
+					"id": "azure-other-02488-icon-service-azure-monitor-dashboard",
+					"name": "Azure Monitor Dashboard",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02488-icon-service-Azure-Monitor-Dashboard.svg"
+				},
+				{
+					"id": "azure-other-02503-icon-service-scvmm-management-servers",
+					"name": "Scvmm Management Servers",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02503-icon-service-SCVMM-Management-Servers.svg"
+				},
+				{
+					"id": "azure-other-02505-icon-service-cloud-services-(extended-support)",
+					"name": "Cloud Services (extended Support)",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02505-icon-service-Cloud-Services-(extended-support).svg"
+				},
+				{
+					"id": "azure-other-02507-icon-service-azure-support-center-blue",
+					"name": "Azure Support Center Blue",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02507-icon-service-Azure-Support-Center-Blue.svg"
+				},
+				{
+					"id": "azure-other-02515-icon-service-web-app-database",
+					"name": "Web App + Database",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02515-icon-service-Web-App-+-Database.svg"
+				},
+				{
+					"id": "azure-other-02518-icon-service-azure-hpc-workbenches",
+					"name": "Azure HPC Workbenches",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02518-icon-service-Azure-HPC-Workbenches.svg"
+				},
+				{
+					"id": "azure-other-02560-icon-service-disk-pool",
+					"name": "Disk Pool",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02560-icon-service-Disk-Pool.svg"
+				},
+				{
+					"id": "azure-other-02561-icon-service-bare-metal-infrastructure",
+					"name": "Bare Metal Infrastructure",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02561-icon-service-Bare-Metal-Infrastructure.svg"
+				},
+				{
+					"id": "azure-other-02573-icon-service-connected-vehicle-platform",
+					"name": "Connected Vehicle Platform",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02573-icon-service-Connected-Vehicle-Platform.svg"
+				},
+				{
+					"id": "azure-other-02579-icon-service-private-endpoints",
+					"name": "Private Endpoints",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02579-icon-service-Private-Endpoints.svg"
+				},
+				{
+					"id": "azure-other-02602-icon-service-open-supply-chain-platform",
+					"name": "Open Supply Chain Platform",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02602-icon-service-Open-Supply-Chain-Platform.svg"
+				},
+				{
+					"id": "azure-other-02625-icon-service-aquila",
+					"name": "Aquila",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02625-icon-service-Aquila.svg"
+				},
+				{
+					"id": "azure-other-02638-icon-service-reserved-capacity",
+					"name": "Reserved Capacity",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02638-icon-service-Reserved-Capacity.svg"
+				},
+				{
+					"id": "azure-other-02654-icon-service-custom-ip-prefix",
+					"name": "Custom Ip Prefix",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02654-icon-service-Custom-IP-Prefix.svg"
+				},
+				{
+					"id": "azure-other-02658-icon-service-fhir-service",
+					"name": "Fhir Service",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02658-icon-service-FHIR-Service.svg"
+				},
+				{
+					"id": "azure-other-02660-icon-service-medtech-service",
+					"name": "Medtech Service",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02660-icon-service-MedTech-Service.svg"
+				},
+				{
+					"id": "azure-other-02663-icon-service-managed-instance-apache-cassandra",
+					"name": "Managed Instance Apache Cassandra",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02663-icon-service-Managed-Instance-Apache-Cassandra.svg"
+				},
+				{
+					"id": "azure-other-02668-icon-service-confidential-ledgers",
+					"name": "Confidential Ledgers",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02668-icon-service-Confidential-Ledgers.svg"
+				},
+				{
+					"id": "azure-other-02681-icon-service-entra-identity-licenses",
+					"name": "Entra Identity Licenses",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02681-icon-service-Entra-Identity-Licenses.svg"
+				},
+				{
+					"id": "azure-other-02691-icon-service-test-base",
+					"name": "Test Base",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02691-icon-service-Test-Base.svg"
+				},
+				{
+					"id": "azure-other-02697-icon-service-azure-orbital",
+					"name": "Azure Orbital",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02697-icon-service-Azure-Orbital.svg"
+				},
+				{
+					"id": "azure-other-02732-icon-service-capacity-reservation-groups",
+					"name": "Capacity Reservation Groups",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02732-icon-service-Capacity-Reservation-Groups.svg"
+				},
+				{
+					"id": "azure-other-02733-icon-service-windows-notification-services",
+					"name": "Windows Notification Services",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02733-icon-service-Windows-Notification-Services.svg"
+				},
+				{
+					"id": "azure-other-02740-icon-service-azure-network-function-manager",
+					"name": "Azure Network Function Manager",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02740-icon-service-Azure-Network-Function-Manager.svg"
+				},
+				{
+					"id": "azure-other-02793-icon-service-mission-landing-zone",
+					"name": "Mission Landing Zone",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02793-icon-service-Mission-Landing-Zone.svg"
+				},
+				{
+					"id": "azure-other-02794-icon-service-mobile-networks",
+					"name": "Mobile Networks",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02794-icon-service-Mobile-Networks.svg"
+				},
+				{
+					"id": "azure-other-02805-icon-service-vm-app-definitions",
+					"name": "VM App Definitions",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02805-icon-service-VM-App-Definitions.svg"
+				},
+				{
+					"id": "azure-other-02806-icon-service-vm-app-versions",
+					"name": "VM App Versions",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02806-icon-service-VM-App-Versions.svg"
+				},
+				{
+					"id": "azure-other-02810-icon-service-azure-edge-hardware-center",
+					"name": "Azure Edge Hardware Center",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02810-icon-service-Azure-Edge-Hardware-Center.svg"
+				},
+				{
+					"id": "azure-other-02819-icon-service-resource-guard",
+					"name": "Resource Guard",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02819-icon-service-Resource-Guard.svg"
+				},
+				{
+					"id": "azure-other-02828-icon-service-ceres",
+					"name": "Ceres",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02828-icon-service-Ceres.svg"
+				},
+				{
+					"id": "azure-other-02842-icon-service-azurite",
+					"name": "Azurite",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02842-icon-service-Azurite.svg"
+				},
+				{
+					"id": "azure-other-02846-icon-service-update-management-center",
+					"name": "Update Management Center",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02846-icon-service-Update-Management-Center.svg"
+				},
+				{
+					"id": "azure-other-02864-icon-service-azure-compute-galleries",
+					"name": "Azure Compute Galleries",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02864-icon-service-Azure-Compute-Galleries.svg"
+				},
+				{
+					"id": "azure-other-02865-icon-service-community-images",
+					"name": "Community Images",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02865-icon-service-Community-Images.svg"
+				},
+				{
+					"id": "azure-other-02866-icon-service-vm-image-version",
+					"name": "VM Image Version",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02866-icon-service-VM-Image-Version.svg"
+				},
+				{
+					"id": "azure-other-02880-icon-service-savings-plans",
+					"name": "Savings Plans",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02880-icon-service-Savings-Plans.svg"
+				},
+				{
+					"id": "azure-other-02884-icon-service-worker-container-app",
+					"name": "Worker Container App",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02884-icon-service-Worker-Container-App.svg"
+				},
+				{
+					"id": "azure-other-02905-icon-service-azure-managed-grafana",
+					"name": "Azure Managed Grafana",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02905-icon-service-Azure-Managed-Grafana.svg"
+				},
+				{
+					"id": "azure-other-02908-icon-service-targets-management",
+					"name": "Targets Management",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02908-icon-service-Targets-Management.svg"
+				},
+				{
+					"id": "azure-other-02909-icon-service-storage-functions",
+					"name": "Storage Functions",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02909-icon-service-Storage-Functions.svg"
+				},
+				{
+					"id": "azure-other-02922-icon-service-sonic-dash",
+					"name": "Sonic Dash",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02922-icon-service-Sonic-Dash.svg"
+				},
+				{
+					"id": "azure-other-02931-icon-service-compliance-center",
+					"name": "Compliance Center",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02931-icon-service-Compliance-Center.svg"
+				},
+				{
+					"id": "azure-other-02939-icon-service-network-security-perimeters",
+					"name": "Network Security Perimeters",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02939-icon-service-Network-Security-Perimeters.svg"
+				},
+				{
+					"id": "azure-other-02944-icon-service-azure-load-testing",
+					"name": "Azure Load Testing",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02944-icon-service-Azure-Load-Testing.svg"
+				},
+				{
+					"id": "azure-other-02949-icon-service-virtual-visits-builder",
+					"name": "Virtual Visits Builder",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02949-icon-service-Virtual-Visits-Builder.svg"
+				},
+				{
+					"id": "azure-other-02951-icon-service-azure-quotas",
+					"name": "Azure Quotas",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02951-icon-service-Azure-Quotas.svg"
+				},
+				{
+					"id": "azure-other-02989-icon-service-container-apps-environments",
+					"name": "Container Apps Environments",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/02989-icon-service-Container-Apps-Environments.svg"
+				},
+				{
+					"id": "azure-other-03071-icon-service-app-compliance-automation",
+					"name": "App Compliance Automation",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03071-icon-service-App-Compliance-Automation.svg"
+				},
+				{
+					"id": "azure-other-03089-icon-service-virtual-instance-for-sap",
+					"name": "Virtual Instance For Sap",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03089-icon-service-Virtual-Instance-for-SAP.svg"
+				},
+				{
+					"id": "azure-other-03090-icon-service-azure-center-for-sap",
+					"name": "Azure Center For Sap",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03090-icon-service-Azure-Center-for-SAP.svg"
+				},
+				{
+					"id": "azure-other-03091-icon-service-azure-storage-mover",
+					"name": "Azure Storage Mover",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03091-icon-service-Azure-Storage-Mover.svg"
+				},
+				{
+					"id": "azure-other-03092-icon-service-central-service-instance-for-sap",
+					"name": "Central Service Instance For Sap",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03092-icon-service-Central-Service-Instance-For-SAP.svg"
+				},
+				{
+					"id": "azure-other-03134-icon-service-kubernetes-fleet-manager",
+					"name": "Kubernetes Fleet Manager",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03134-icon-service-Kubernetes-Fleet-Manager.svg"
+				},
+				{
+					"id": "azure-other-03137-icon-service-express-route-traffic-collector",
+					"name": "Express Route Traffic Collector",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03137-icon-service-Express-Route-Traffic-Collector.svg"
+				},
+				{
+					"id": "azure-other-03175-icon-service-database-instance-for-sap",
+					"name": "Database Instance For Sap",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03175-icon-service-Database-Instance-For-SAP.svg"
+				},
+				{
+					"id": "azure-other-03190-icon-service-elastic-san",
+					"name": "Elastic San",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03190-icon-service-Elastic-SAN.svg"
+				},
+				{
+					"id": "azure-other-03250-icon-service-microsoft-dev-box",
+					"name": "Microsoft Dev Box",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03250-icon-service-Microsoft-Dev-Box.svg"
+				},
+				{
+					"id": "azure-other-03251-icon-service-azure-deployment-environments",
+					"name": "Azure Deployment Environments",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03251-icon-service-Azure-Deployment-Environments.svg"
+				},
+				{
+					"id": "azure-other-03308-icon-service-azure-dev-tunnels",
+					"name": "Azure Dev Tunnels",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03308-icon-service-Azure-Dev-Tunnels.svg"
+				},
+				{
+					"id": "azure-other-03314-icon-service-azure-sustainability",
+					"name": "Azure Sustainability",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03314-icon-service-Azure-Sustainability.svg"
+				},
+				{
+					"id": "azure-other-03361-icon-service-icm-troubleshooting",
+					"name": "Icm Troubleshooting",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03361-icon-service-IcM-Troubleshooting.svg"
+				},
+				{
+					"id": "azure-other-03365-icon-service-osconfig",
+					"name": "Osconfig",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03365-icon-service-OSConfig.svg"
+				},
+				{
+					"id": "azure-other-03394-icon-service-virtual-enclaves",
+					"name": "Virtual Enclaves",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03394-icon-service-Virtual-Enclaves.svg"
+				},
+				{
+					"id": "azure-other-03399-icon-service-aks-istio",
+					"name": "AKS Istio",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03399-icon-service-AKS-Istio.svg"
+				},
+				{
+					"id": "azure-other-03402-icon-service-defender-cm-local-manager",
+					"name": "Defender Cm Local Manager",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03402-icon-service-Defender-CM-Local-Manager.svg"
+				},
+				{
+					"id": "azure-other-03403-icon-service-defender-external-management",
+					"name": "Defender External Management",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03403-icon-service-Defender-External-Management.svg"
+				},
+				{
+					"id": "azure-other-03404-icon-service-defender-freezer-monitor",
+					"name": "Defender Freezer Monitor",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03404-icon-service-Defender-Freezer-Monitor.svg"
+				},
+				{
+					"id": "azure-other-03405-icon-service-defender-historian",
+					"name": "Defender Historian",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03405-icon-service-Defender-Historian.svg"
+				},
+				{
+					"id": "azure-other-03406-icon-service-defender-hmi",
+					"name": "Defender Hmi",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03406-icon-service-Defender-HMI.svg"
+				},
+				{
+					"id": "azure-other-03407-icon-service-defender-marquee",
+					"name": "Defender Marquee",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03407-icon-service-Defender-Marquee.svg"
+				},
+				{
+					"id": "azure-other-03408-icon-service-defender-robot-controller",
+					"name": "Defender Robot Controller",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03408-icon-service-Defender-Robot-Controller.svg"
+				},
+				{
+					"id": "azure-other-03409-icon-service-defender-sensor",
+					"name": "Defender Sensor",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03409-icon-service-Defender-Sensor.svg"
+				},
+				{
+					"id": "azure-other-03410-icon-service-defender-slot",
+					"name": "Defender Slot",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03410-icon-service-Defender-Slot.svg"
+				},
+				{
+					"id": "azure-other-03411-icon-service-defender-web-guiding-system",
+					"name": "Defender Web Guiding System",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03411-icon-service-Defender-Web-Guiding-System.svg"
+				},
+				{
+					"id": "azure-other-03412-icon-service-defender-dcs-controller",
+					"name": "Defender Dcs Controller",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03412-icon-service-Defender-DCS-Controller.svg"
+				},
+				{
+					"id": "azure-other-03413-icon-service-defender-distributer-control-system",
+					"name": "Defender Distributer Control System",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03413-icon-service-Defender-Distributer-Control-System.svg"
+				},
+				{
+					"id": "azure-other-03414-icon-service-defender-engineering-station",
+					"name": "Defender Engineering Station",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03414-icon-service-Defender-Engineering-Station.svg"
+				},
+				{
+					"id": "azure-other-03415-icon-service-defender-industrial-packaging-system",
+					"name": "Defender Industrial Packaging System",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03415-icon-service-Defender-Industrial-Packaging-System.svg"
+				},
+				{
+					"id": "azure-other-03416-icon-service-defender-industrial-printer",
+					"name": "Defender Industrial Printer",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03416-icon-service-Defender-Industrial-Printer.svg"
+				},
+				{
+					"id": "azure-other-03417-icon-service-defender-industrial-scale-system",
+					"name": "Defender Industrial Scale System",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03417-icon-service-Defender-Industrial-Scale-System.svg"
+				},
+				{
+					"id": "azure-other-03418-icon-service-defender-industrial-robot",
+					"name": "Defender Industrial Robot",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03418-icon-service-Defender-Industrial-Robot.svg"
+				},
+				{
+					"id": "azure-other-03419-icon-service-defender-meter",
+					"name": "Defender Meter",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03419-icon-service-Defender-Meter.svg"
+				},
+				{
+					"id": "azure-other-03420-icon-service-defender-plc",
+					"name": "Defender Plc",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03420-icon-service-Defender-PLC.svg"
+				},
+				{
+					"id": "azure-other-03421-icon-service-defender-pneumatic-device",
+					"name": "Defender Pneumatic Device",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03421-icon-service-Defender-Pneumatic-Device.svg"
+				},
+				{
+					"id": "azure-other-03422-icon-service-defender-programable-board",
+					"name": "Defender Programable Board",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03422-icon-service-Defender-Programable-Board.svg"
+				},
+				{
+					"id": "azure-other-03423-icon-service-defender-relay",
+					"name": "Defender Relay",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03423-icon-service-Defender-Relay.svg"
+				},
+				{
+					"id": "azure-other-03424-icon-service-defender-rtu",
+					"name": "Defender Rtu",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03424-icon-service-Defender-RTU.svg"
+				},
+				{
+					"id": "azure-other-03468-icon-service-hdi-aks-cluster",
+					"name": "Hdi AKS Cluster",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03468-icon-service-HDI-AKS-Cluster.svg"
+				},
+				{
+					"id": "azure-other-03528-icon-service-monitor-health-models",
+					"name": "Monitor Health Models",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03528-icon-service-Monitor-Health-Models.svg"
+				},
+				{
+					"id": "azure-other-03563-icon-service-wac-installer",
+					"name": "Wac Installer",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/03563-icon-service-WAC-Installer.svg"
+				},
+				{
+					"id": "azure-other-10018-icon-service-azure-a",
+					"name": "Azure A",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/10018-icon-service-Azure-A.svg"
+				},
+				{
+					"id": "azure-other-10077-icon-service-local-network-gateways",
+					"name": "Local Network Gateways",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/10077-icon-service-Local-Network-Gateways.svg"
+				},
+				{
+					"id": "azure-other-10117-icon-service-edge-management",
+					"name": "Edge Management",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/10117-icon-service-Edge-Management.svg"
+				},
+				{
+					"id": "azure-other-10139-icon-service-instance-pools",
+					"name": "Instance Pools",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/10139-icon-service-Instance-Pools.svg"
+				},
+				{
+					"id": "azure-other-10190-icon-service-azure-sphere",
+					"name": "Azure Sphere",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/10190-icon-service-Azure-Sphere.svg"
+				},
+				{
+					"id": "azure-other-10232-icon-service-app-registrations",
+					"name": "App Registrations",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/10232-icon-service-App-Registrations.svg"
+				},
+				{
+					"id": "azure-other-10334-icon-service-exchange-on-premises-access",
+					"name": "Exchange On Premises Access",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/10334-icon-service-Exchange-On-Premises-Access.svg"
+				},
+				{
+					"id": "azure-other-10355-icon-service-wac",
+					"name": "Wac",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/10355-icon-service-WAC.svg"
+				},
+				{
+					"id": "azure-other-10422-icon-service-azureattestation",
+					"name": "Azureattestation",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/10422-icon-service-AzureAttestation.svg"
+				},
+				{
+					"id": "azure-other-10778-icon-service-rtos",
+					"name": "Rtos",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/10778-icon-service-RTOS.svg"
+				},
+				{
+					"id": "azure-other-10846-icon-service-web-jobs",
+					"name": "Web Jobs",
+					"provider": "azure",
+					"category": "Other",
+					"tags": [],
+					"svgPath": "other/10846-icon-service-Web-Jobs.svg"
+				}
+			]
+		},
+		{
+			"name": "Web",
+			"icons": [
+				{
+					"id": "azure-web-00046-icon-service-app-service-plans",
+					"name": "App Service Plans",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/00046-icon-service-App-Service-Plans.svg"
+				},
+				{
+					"id": "azure-web-00049-icon-service-app-service-certificates",
+					"name": "App Service Certificates",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/00049-icon-service-App-Service-Certificates.svg"
+				},
+				{
+					"id": "azure-web-00050-icon-service-app-service-domains",
+					"name": "App Service Domains",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/00050-icon-service-App-Service-Domains.svg"
+				},
+				{
+					"id": "azure-web-01007-icon-service-static-apps",
+					"name": "Static Apps",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/01007-icon-service-Static-Apps.svg"
+				},
+				{
+					"id": "azure-web-03291-icon-service-api-center",
+					"name": "API Center",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/03291-icon-service-API-Center.svg"
+				},
+				{
+					"id": "azure-web-03335-icon-service-power-platform",
+					"name": "Power Platform",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/03335-icon-service-Power-Platform.svg"
+				},
+				{
+					"id": "azure-web-03397-icon-service-app-space",
+					"name": "App Space",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/03397-icon-service-App-Space.svg"
+				},
+				{
+					"id": "azure-web-03595-icon-service-app-space-component",
+					"name": "App Space Component",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/03595-icon-service-App-Space-Component.svg"
+				},
+				{
+					"id": "azure-web-10035-icon-service-app-services",
+					"name": "App Services",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/10035-icon-service-App-Services.svg"
+				},
+				{
+					"id": "azure-web-10042-icon-service-api-management-services",
+					"name": "API Management Services",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/10042-icon-service-API-Management-Services.svg"
+				},
+				{
+					"id": "azure-web-10044-icon-service-cognitive-search",
+					"name": "Cognitive Search",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/10044-icon-service-Cognitive-Search.svg"
+				},
+				{
+					"id": "azure-web-10047-icon-service-app-service-environments",
+					"name": "App Service Environments",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/10047-icon-service-App-Service-Environments.svg"
+				},
+				{
+					"id": "azure-web-10048-icon-service-api-connections",
+					"name": "API Connections",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/10048-icon-service-API-Connections.svg"
+				},
+				{
+					"id": "azure-web-10052-icon-service-signalr",
+					"name": "Signalr",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/10052-icon-service-SignalR.svg"
+				},
+				{
+					"id": "azure-web-10053-icon-service-notification-hub-namespaces",
+					"name": "Notification Hub Namespaces",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/10053-icon-service-Notification-Hub-Namespaces.svg"
+				},
+				{
+					"id": "azure-web-10073-icon-service-front-door-and-cdn-profiles",
+					"name": "Front Door And Cdn Profiles",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/10073-icon-service-Front-Door-and-CDN-Profiles.svg"
+				},
+				{
+					"id": "azure-web-10162-icon-service-cognitive-services",
+					"name": "Cognitive Services",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/10162-icon-service-Cognitive-Services.svg"
+				},
+				{
+					"id": "azure-web-10309-icon-service-azure-media-service",
+					"name": "Azure Media Service",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/10309-icon-service-Azure-Media-Service.svg"
+				},
+				{
+					"id": "azure-web-10370-icon-service-azure-spring-apps",
+					"name": "Azure Spring Apps",
+					"provider": "azure",
+					"category": "Web",
+					"tags": [],
+					"svgPath": "web/10370-icon-service-Azure-Spring-Apps.svg"
+				}
+			]
+		}
+	]
 }

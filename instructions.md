@@ -18,4 +18,5 @@ Note:
     - Group option does not seem to do anything.
     - Show the shapes in a dropdown instead of showing them separately. Also display shape names along with the icon.
     - Edge properties for directions Backward and None are incorrect. Selecting Backward shows arrows in the both directions. Selecting None shows arrows in both directions when it should not have any. 
+    - Edge properties - Forward and backward are interchanged.
 8. Provide option to the user to select the path alone. Use '/Users/rvenkat/Downloads/Icon-package_01302026.31b40d126ed27079b708594940ad577a86150582/Resource-Icons_01302026/Res_Containers' as the default path for the custom icons. Do not expect the user to provide a manifest file. Generate/Regenerate any necessary files as part of loading the svg files among all other files in the selected folder.

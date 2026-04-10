@@ -75,6 +75,7 @@ export default function DiagramCanvas() {
           svgContent: icon.svgContent,
           label: icon.name,
           labelPosition: 'bottom',
+          textWrap: true,
         },
         style: { width: 80, height: 80 },
       })

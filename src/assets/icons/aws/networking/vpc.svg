@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-  <rect width="60" height="60" rx="8" fill="#8C4FFF"/>
-  <rect x="8" y="8" width="44" height="44" rx="4" fill="none" stroke="white" stroke-width="2.5" stroke-dasharray="4 2"/>
-  <text x="30" y="35" font-family="Arial" font-size="10" font-weight="bold" fill="white" text-anchor="middle">VPC</text>
-</svg>

@@ -106,7 +106,7 @@ export const useDiagramStore = create<DiagramStore>()(
             ...connection,
             type: 'arrowEdge',
             id: uuidv4(),
-            markerEnd: { type: 'arrowclosed', width: 16, height: 16, color: '#64748b' },
+            markerStart: { type: 'arrowclosed', width: 16, height: 16, color: '#64748b' },
           },
           state.edges
         )

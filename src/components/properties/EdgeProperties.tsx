@@ -15,16 +15,16 @@ function getDirection(edge: Edge): Direction {
   const hasEnd = !!edge.markerEnd
   const hasStart = !!edge.markerStart
   if (hasEnd && hasStart) return 'both'
-  if (hasEnd) return 'forward'
-  if (hasStart) return 'backward'
+  if (hasEnd) return 'backward'
+  if (hasStart) return 'forward'
   return 'none'
 }
 
 function markersForDirection(direction: Direction, color: string) {
   const marker = { type: MarkerType.ArrowClosed, color, width: 16, height: 16 }
   return {
-    markerEnd: direction === 'forward' || direction === 'both' ? marker : null,
-    markerStart: direction === 'backward' || direction === 'both' ? marker : null,
+    markerEnd: direction === 'backward' || direction === 'both' ? marker : null,
+    markerStart: direction === 'forward' || direction === 'both' ? marker : null,
   }
 }
 
