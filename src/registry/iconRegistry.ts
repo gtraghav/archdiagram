@@ -13,7 +13,9 @@ const svgModules = import.meta.glob('../assets/icons/**/*.svg', {
 
 function sanitizeSvg(svg: string): string {
   // Strip fixed width/height from root <svg> element, keep viewBox
+  // Remove embedded <title> so the browser shows the outer div's title (icon.name) on hover
   return svg
+    .replace(/<title[^>]*>[\s\S]*?<\/title>/gi, '')
     .replace(/<svg([^>]*)>/, (match, attrs: string) => {
       const cleanedAttrs = attrs
         .replace(/\s+width="[^"]*"/g, '')
